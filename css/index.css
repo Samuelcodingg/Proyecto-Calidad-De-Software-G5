@@ -1,0 +1,68 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato',sans-serif;
+}
+
+body, html{
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/*Efecto Paralax*/
+.mySlides, .bgimg-2, .bgimg-3, .bgimg-4{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Primeras imágenes de fondo (se van a incluir con la diapositiva)*/
+.mySlides{
+    min-height: 100%;
+}
+
+/*Segunda imagen*/
+.bgimg-2{
+    background-image: url("../image/quienes-somos.jpg");
+    min-height: 400px;
+}
+
+/*Tercera imagen*/
+.bgimg-3{
+    background-image: url("../image/fondo2.jpg");
+    min-height: 400px;
+}
+
+/*Cuarta imagen*/
+.bgimg-4{
+    background-image: url("../image/fondo3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide{
+    letter-spacing: 10px;
+}
+.w3-hover-opacity{
+    cursor: pointer;
+}
+
+/*Desactivar paralax para telefonos y tablets*/
+@media only screen and (max-device-width: 1600px){
+    .mySlides, .bgimg-2, .bgimg-3, .bgimg-4{
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+
+
+/*Contenedor nombre empresa*/
+.borde{
+    border-radius: 15px;
+}
+
+
+/*Imagenes*/
+.agrandar-imagen{
+    min-height: 217.23px;
+    min-width: 202.23px;
+}
