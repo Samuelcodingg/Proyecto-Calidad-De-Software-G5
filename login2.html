@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADTECSOFT | Log-In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login2.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Registro -->
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Crea una cuenta</h1>
+                <div class="redsocial-container">
+                    <a href="#" class="redsocial"> <i class="fab fa-facebook"></i></a>
+                    <a href="#" class="redsocial"> <i class="fab fa-google"></i></a>
+                </div>
+                <span>o creála usando una dirección de correo electrónico</span>
+                <input type="text" placeholder="Nombre"/>
+                <input type="text" placeholder="Correo electrónico"/>
+                <input type="text" placeholder="Contraseña"/>
+                <button>Registrarme</button>
+            </form>
+        </div>
+
+        <!-- Inicio de sesión -->
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Inicia sesión</h1>
+                <div class="redsocial-container">
+                    <a href="#" class="redsocial"> <i class="fab fa-facebook"></i></a>
+                    <a href="#" class="redsocial"> <i class="fab fa-google"></i></a>
+                </div>
+                <span>o usa una dirección de correo electrónico</span>
+                <input type="text" placeholder="Nombre"/>
+                <input type="text" placeholder="Contraseña"/>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¿Ya tienes una cuenta?</h1>
+                    <p>
+                        Inicia sesión aquí
+                    </p>
+                    <button class="ghost" id="signIn">Iniciar sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡Hola!</h1>
+                    <p>Para una mejor experiencia de compra, regístrate</p>
+                    <button class="ghost" id="signUp">Registrarme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/login2.js"></script>
+</body>
+</html>
