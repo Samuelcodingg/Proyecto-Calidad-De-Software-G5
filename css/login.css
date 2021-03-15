@@ -231,3 +231,20 @@ body {
         right: auto;
     }
 }
+
+/*validacion de llenado de campos form*/
+.ok {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #1e6;
+    color: #fff;
+}
+
+.bad {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff;
+}

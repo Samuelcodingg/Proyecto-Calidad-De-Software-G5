@@ -23,10 +23,10 @@
                 <form class="login-form " method="post">
                     <h3>Inicia sesión</h3>
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="email" placeholder="Email" class="form-control" name="mail">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Contraseña" class="form-control">
+                        <input type="password" placeholder="Contraseña" class="form-control" name="pass">
                     </div>
                     <div class="form-group">
                         <label>
@@ -36,6 +36,9 @@
                     <input type="submit" class="submit-btn" value="Iniciar Sesión" name="login">
                     <p><a href="#" class="register-btn">Registrarse</a> | <a href="#" class="lost-pass-btn">¿Olvidaste tu contraseña?</a></p>
                 </form>
+                <?php
+                    include("loguear.php");
+                ?>
                 <!--Final del formulario Inicio de sesión-->
 
                  <!--Inicio del formulario Registro-->
@@ -48,10 +51,10 @@
                         <input type="text" placeholder="Apellido" class="form-control" name="apellido">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control" name="email">
+                        <input type="email" placeholder="Email" class="form-control" name="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Contraseña" class="form-control" name="password">
+                        <input type="password" placeholder="Contraseña" class="form-control" name="password">
                     </div>
                     <input type="submit" class="submit-btn" value="Registrarme" name="register">
                     <p><a href="#" class="login-btn">Ya tengo una cuenta</a> | <a href="#" class="lost-pass-btn">¿Olvidaste tu contraseña?</a></p>
