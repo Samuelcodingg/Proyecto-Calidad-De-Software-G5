@@ -20,7 +20,7 @@
             </div>
             <div class="form">
                 <!--Inicio del formulario Inicio Sesión-->
-                <div class="login-form ">
+                <form class="login-form " method="post">
                     <h3>Inicia sesión</h3>
                     <div class="form-group">
                         <input type="text" placeholder="Email" class="form-control">
@@ -33,29 +33,32 @@
                             <input type="checkbox"> Recuérdame
                         </label>
                     </div>
-                    <button type="button" class="submit-btn">Iniciar sesión</button>
+                    <input type="submit" class="submit-btn" value="Iniciar Sesión" name="login">
                     <p><a href="#" class="register-btn">Registrarse</a> | <a href="#" class="lost-pass-btn">¿Olvidaste tu contraseña?</a></p>
-                </div>
+                </form>
                 <!--Final del formulario Inicio de sesión-->
 
                  <!--Inicio del formulario Registro-->
-                 <div class="register-form form-hidden">
+                 <form class="register-form form-hidden" method="post">
                     <h3>Registrarse</h3>
                     <div class="form-group">
-                        <input type="text" placeholder="Nombre" class="form-control">
+                        <input type="text" placeholder="Nombre" class="form-control" name="name">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Apellido" class="form-control">
+                        <input type="text" placeholder="Apellido" class="form-control" name="apellido">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="text" placeholder="Email" class="form-control" name="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Contraseña" class="form-control">
+                        <input type="text" placeholder="Contraseña" class="form-control" name="password">
                     </div>
-                    <button type="button" class="submit-btn">Registrarme</button>
+                    <input type="submit" class="submit-btn" value="Registrarme" name="register">
                     <p><a href="#" class="login-btn">Ya tengo una cuenta</a> | <a href="#" class="lost-pass-btn">¿Olvidaste tu contraseña?</a></p>
-                </div>
+                </form>
+                <?php
+                    include("registrar.php");
+                ?>
                 <!--Final del formulario Registro-->
 
                 <!--Inicio del formulario Olvidé mi contraseña-->
