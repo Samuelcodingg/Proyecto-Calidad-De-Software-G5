@@ -4,45 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <title>HADTECSOFT|Log-In</title>
+    <link rel="stylesheet" href="css/login.css">
+    <title>HADTECSOFT | Log-In</title>
 </head>
 <body>
-    <img class="wave" src="image/wave.svg" alt="">
-    <div class="container">
-        <div class="img">
-            <img src="image/access.png" alt="">
-        </div>
-        <div class="login-content">
-            <form action="login.html">
-                <img src="image/user.png" alt="">
-                <h2 class="tittle">Welcome</h2>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
+    <div class="login-page">
+        <div class="box">
+            <div class="left">
+                <h3>Crea una cuenta</h3>
+                <button type="button" class="register-btn"> Registrarme</button>
+            </div>
+            <div class="right">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <button type="button" class="login-btn"> Iniciar sesión</button>
+            </div>
+            <div class="form">
+                <!--Inicio del formulario Inicio Sesión-->
+                <div class="login-form ">
+                    <h3>Inicia sesión</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
                     </div>
-                    <div class="div">
-                        <h5>Usuario</h5>
-                        <input type="text" class="input">
+                    <div class="form-group">
+                        <input type="text" placeholder="Contraseña" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> Recuérdame
+                        </label>
+                    </div>
+                    <button type="button" class="submit-btn">Iniciar sesión</button>
+                    <p><a href="#" class="register-btn">Registrarse</a> | <a href="#" class="lost-pass-btn">¿Olvidaste tu contraseña?</a></p>
                 </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-look"></i>
+                <!--Final del formulario Inicio de sesión-->
+
+                 <!--Inicio del formulario Registro-->
+                 <div class="register-form form-hidden">
+                    <h3>Registrarse</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre" class="form-control">
                     </div>
-                    <div class="div">
-                        <h5>Contraseña</h5>
-                        <input type="password" class="input">
+                    <div class="form-group">
+                        <input type="text" placeholder="Apellido" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Contraseña" class="form-control">
+                    </div>
+                    <button type="button" class="submit-btn">Registrarme</button>
+                    <p><a href="#" class="login-btn">Ya tengo una cuenta</a> | <a href="#" class="lost-pass-btn">¿Olvidaste tu contraseña?</a></p>
                 </div>
-                <a href="#">¿Olvidó su contraseña?</a>
-                <input type="submit" class="btn" value="login">
-            </form>
+                <!--Final del formulario Registro-->
+
+                <!--Inicio del formulario Olvidé mi contraseña-->
+                 <div class="lost-password-form form-hidden">
+                    <h3>Olvidé mi contraseña</h3>
+                    <h5>Recibirás un email con un link para crear una nueva contraseña</h5>
+                    
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                  
+                    <button type="button" class="submit-btn">Nueva contraseña</button>
+                    <p><a href="#" class="login-btn">Iniciar sesión</a> | <a href="#" class="register-btn">Registrarse</a></p>
+                </div>
+                <!--Final del formulario Olvidé mi contraseña-->
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
