@@ -7,7 +7,7 @@
             $apellido = trim($_POST['apellido']);
             $email = trim($_POST['email']);
             $password = trim($_POST['password']);
-            $consulta = "INSERT INTO datos(nombre, apellido, email, password) VALUES ('$name','$apellido','$email','$password')";
+            $consulta = "INSERT INTO datos(name, apellido, email, password) VALUES ('$name','$apellido','$email','$password')";
             $resultado = mysqli_query($conex,$consulta);
             if($resultado){
                 ?>
