@@ -11,19 +11,19 @@
             $resultado = mysqli_query($conex,$consulta);
             if($resultado){
                 ?>
-                    <h3 class="ok">¡Te has inscrito correctamente!</h3>
+                    <h4 class="ok">¡Te has inscrito correctamente!</h4>
                 <?php
                     echo header("refresh:5;url=index.php");
             }
             else{
                 ?>
-                <h3 class="bad">¡Ups, ha ocurrido un error!</h3>
+                <h4 class="bad">¡Ups, ha ocurrido un error!</h4>
                 <?php
             }
         }
         else{
             ?>
-                <h3 class="bad">¡Por favor, complete los campos!</h3>
+                <h4 class="bad">¡Por favor, complete los campos!</h4>
             <?php
         }
     }

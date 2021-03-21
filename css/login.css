@@ -236,7 +236,8 @@ body {
 .ok {
     text-align: center;
     width: 100%;
-    padding: 12px;
+    font-weight: 400;
+    padding: 10px;
     background-color: #1e6;
     color: #fff;
 }
@@ -244,7 +245,8 @@ body {
 .bad {
     text-align: center;
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: #a22;
     color: #fff;
+    font-weight: 400;
 }
