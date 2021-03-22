@@ -71,20 +71,6 @@
         <span>Home/Procesadores</span>
         <h1>Lorem ipsum, dolor.</h1>
         <div class="price">$50</div>
-        <form>
-          <div>
-            <select>
-              <option value="Select Size" selected disabled>
-                Select Size
-              </option>
-              <option value="1">32</option>
-              <option value="2">42</option>
-              <option value="3">52</option>
-              <option value="4">62</option>
-            </select>
-            <span><i class="fas fa-chevron-down"></i></span>
-          </div>
-        </form>
 
         <form class="form">
           <input type="text" placeholder="1" />
