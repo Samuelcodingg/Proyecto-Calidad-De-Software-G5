@@ -192,7 +192,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="productDetails.html">Bambi Print Mini Backpack</a>
+              <a href="productDetails.php">Bambi Print Mini Backpack</a>
               <div class="price">
                 <span>$150</span>
               </div>
