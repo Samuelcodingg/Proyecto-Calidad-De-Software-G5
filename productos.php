@@ -18,9 +18,9 @@
           <div class="logo">
             <img src="image/Logo HadtecSoft (1).png" width="125px"></div>
           <div class="nav-items">
-          <li><a href="#">Inicio</a></li>
+          <li><a href="index.php">Inicio</a></li>
           <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Catálogo</a></li>
+          <li><a href="productos.php">Catálogo</a></li>
           <li><a href="#">Contacto</a></li>
           <li><a href="login.php">Mi cuenta</a></li>
           </div>
@@ -52,7 +52,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Shoes</span>
+                <span>Procesadores</span>
                 <small>(10)</small>
               </label>
             </li>
@@ -60,7 +60,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Bags</span>
+                <span>Tarjetas Gráficas</span>
                 <small>(7)</small>
               </label>
             </li>
@@ -68,7 +68,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span> Accessories</span>
+                <span> Placa Madre</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -76,7 +76,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Clothings</span>
+                <span>Disco Duro</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -92,7 +92,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Gucci</span>
+                <span>Intel</span>
                 <small>(10)</small>
               </label>
             </li>
@@ -100,7 +100,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Burberry</span>
+                <span>Ryzen</span>
                 <small>(7)</small>
               </label>
             </li>
@@ -108,7 +108,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span> Accessories</span>
+                <span> Kingstom</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -116,7 +116,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Valentino</span>
+                <span>Asus</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -124,7 +124,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Dolce & Gabbana</span>
+                <span>Hyperx</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -140,7 +140,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Moreschi</span>
+                <span>Corsair</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -148,7 +148,7 @@
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Givenchy</span>
+                <span>Samsung</span>
                 <small>(3)</small>
               </label>
             </li>
@@ -180,7 +180,7 @@
 
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -192,7 +192,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="productDetails.php">Bambi Print Mini Backpack</a>
+              <a href="productDetails.php">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -200,7 +200,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -212,7 +212,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -220,7 +220,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -232,7 +232,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -240,7 +240,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -252,7 +252,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -260,7 +260,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -272,7 +272,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -280,7 +280,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -292,7 +292,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -300,7 +300,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -312,7 +312,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -320,7 +320,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -332,7 +332,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -340,7 +340,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -352,7 +352,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -360,7 +360,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -372,7 +372,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -380,7 +380,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -392,7 +392,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -400,7 +400,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -412,7 +412,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -420,7 +420,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -432,7 +432,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -440,7 +440,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg" alt="" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -452,7 +452,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>
@@ -460,7 +460,7 @@
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="image/camisa1.jpg"" />
+              <img src="image/Procesadores-Intel-Core-i7-6.jpg" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
@@ -472,7 +472,7 @@
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lorem ipsum, dolor.</a>
               <div class="price">
                 <span>$150</span>
               </div>

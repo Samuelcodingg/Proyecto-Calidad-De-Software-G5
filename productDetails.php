@@ -26,9 +26,9 @@
           <div class="logo">
             <img src="image/Logo HadtecSoft (1).png" width="125px"></div>
           <div class="nav-items">
-          <li><a href="#">Inicio</a></li>
+          <li><a href="index.php">Inicio</a></li>
           <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Catálogo</a></li>
+          <li><a href="productos.php">Catálogo</a></li>
           <li><a href="#">Contacto</a></li>
           <li><a href="login.php">Mi cuenta</a></li>
           </div>
@@ -50,26 +50,26 @@
     <div class="details container">
       <div class="left">
         <div class="main">
-          <img src="image/camisa1.jpg" alt="" />
+          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
         </div>
         <div class="thumbnails">
           <div class="thumbnail">
-            <img src="image/camisa1.jpg" alt="" />
+            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           </div>
           <div class="thumbnail">
-            <img src="image/camisa1.jpg" alt="" />
+            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           </div>
           <div class="thumbnail">
-            <img src="image/camisa1.jpg" alt="" />
+            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           </div>
           <div class="thumbnail">
-            <img src="image/camisa1.jpg" alt="" />
+            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="right">
-        <span>Home/T-shirt</span>
-        <h1>Bambi Print Mini Backpack</h1>
+        <span>Home/Procesadores</span>
+        <h1>Lorem ipsum, dolor.</h1>
         <div class="price">$50</div>
         <form>
           <div>
@@ -110,7 +110,7 @@
     <div class="product-layout container">
       <div class="product">
         <div class="img-container">
-          <img src="image/camisa1.jpg" alt="" />
+          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -122,7 +122,7 @@
           </ul>
         </div>
         <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
+          <a href="">Lorem ipsum, dolor.</a>
           <div class="price">
             <span>$150</span>
           </div>
@@ -130,7 +130,7 @@
       </div>
       <div class="product">
         <div class="img-container">
-          <img src="image/camisa1.jpg" alt="" />
+          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -142,7 +142,7 @@
           </ul>
         </div>
         <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
+          <a href="">Lorem ipsum, dolor.</a>
           <div class="price">
             <span>$150</span>
           </div>
@@ -150,7 +150,7 @@
       </div>
       <div class="product">
         <div class="img-container">
-          <img src="image/camisa1.jpg" alt="" />
+          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -162,7 +162,7 @@
           </ul>
         </div>
         <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
+          <a href="">Lorem ipsum, dolor.</a>
           <div class="price">
             <span>$150</span>
           </div>
@@ -170,7 +170,7 @@
       </div>
       <div class="product">
         <div class="img-container">
-          <img src="image/camisa1.jpg" alt="" />
+          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -182,7 +182,7 @@
           </ul>
         </div>
         <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
+          <a href="">Lorem ipsum, dolor.</a>
           <div class="price">
             <span>$150</span>
           </div>
