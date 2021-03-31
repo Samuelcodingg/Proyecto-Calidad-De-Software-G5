@@ -180,7 +180,7 @@
 
           <?php
             include("con_db.php");
-            $query = mysqli_query($conex, "SELECT linkImagen1, nombre, precio FROM productoshardware;");
+            $query = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio FROM productoshardware;");
 
             $result = mysqli_num_rows($query);
 
@@ -190,7 +190,7 @@
                 ?>
                 <div class="product">
                 <div class="img-container">
-                  <?php echo '<img src="'.$data['linkImagen1'].'" alt=""/>'?>
+                <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo '<img src="'.$data['linkImagen1'].'" alt=""/>'?></a>
                   <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->
                   <div class="addCart">
                     <i class="fas fa-shopping-cart"></i>
@@ -203,7 +203,7 @@
                   </ul>
                 </div>
                 <div class="bottom">
-                  <a href="productDetails.php"><?php echo $data['nombre']?></a>
+                  <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo $data['nombre']?></a>
                   <div class="price">
                     <span><?php echo 'S/'.$data['precio'] ?></span>
                   </div>

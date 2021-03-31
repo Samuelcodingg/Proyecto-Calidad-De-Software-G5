@@ -17,7 +17,12 @@
 </head>
 
 <body>
- 
+  <?php include("con_db.php");
+    $id = $_GET['id'];
+    $query = mysqli_query($conex, "SELECT id, linkImagen1, linkImagen2, linkImagen3, linkImagen4, linkImagen5, nombre, precio, tipo, stock, descripcion FROM productoshardware WHERE id = $id;");
+    $dataProduct = mysqli_fetch_array($query)
+  
+  ?>
   <!-- Navigation -->
   <div class="header">
         <nav>
@@ -50,132 +55,41 @@
     <div class="details container">
       <div class="left">
         <div class="main">
-          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
+          <?php echo '<img src="'.$dataProduct['linkImagen1'].'" alt=""/>'?>
         </div>
         <div class="thumbnails">
           <div class="thumbnail">
-            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
+            <?php echo '<img src="'.$dataProduct['linkImagen2'].'" alt=""/>'?>
           </div>
           <div class="thumbnail">
-            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
+            <?php echo '<img src="'.$dataProduct['linkImagen3'].'" alt=""/>'?>
           </div>
           <div class="thumbnail">
-            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
+            <?php echo '<img src="'.$dataProduct['linkImagen4'].'" alt=""/>'?>
           </div>
           <div class="thumbnail">
-            <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
+            <?php echo '<img src="'.$dataProduct['linkImagen5'].'" alt=""/>'?>
           </div>
         </div>
       </div>
       <div class="right">
-        <span>Home/Procesadores</span>
-        <h1>Lorem ipsum, dolor.</h1>
-        <div class="price">$50</div>
+        <span><?php echo 'Home/'.$dataProduct['tipo']?></span>
+        <h1><?php echo $dataProduct['nombre']?></h1>
+        <div class="price"><?php echo 'S/'.$dataProduct['precio'] ?></div>
 
         <form class="form">
-          <input type="text" placeholder="1" />
+          <input type="text" placeholder="<?php echo $dataProduct['stock'] ?>" />
           <a href="cart.html" class="addCart">Add To Cart</a>
         </form>
         <h3>Product Detail</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
-          delectus nulla voluptates nesciunt quidem laudantium, quisquam
-          voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
+          <?php echo $dataProduct['descripcion']?>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Related Products -->
 
-  <section class="section related-products">
-    <div class="title">
-      <h2>Related Products</h2>
-      <span>Select from the premium product brands and save plenty money</span>
-    </div>
-    <div class="product-layout container">
-      <div class="product">
-        <div class="img-container">
-          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Lorem ipsum, dolor.</a>
-          <div class="price">
-            <span>$150</span>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="img-container">
-          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Lorem ipsum, dolor.</a>
-          <div class="price">
-            <span>$150</span>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="img-container">
-          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Lorem ipsum, dolor.</a>
-          <div class="price">
-            <span>$150</span>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="img-container">
-          <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Lorem ipsum, dolor.</a>
-          <div class="price">
-            <span>$150</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <div class="footer">
