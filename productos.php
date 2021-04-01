@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HADTECSOFT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index1.css">
+    <link rel="stylesheet" href="css/index1.css?v=<?php echo time(); ?>">
+    <script src="js/jquery-3.6.0.js?v=<?php echo time(); ?>"></script>
+    <script src="js/mostrar.js?v=<?php echo time(); ?>"></script>
     <script src="https://kit.fontawesome.com/647c5e73f8.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -48,112 +50,36 @@
             <h3>Categoría</h3>
           </div>
 
-          <ul class="block-content">
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Procesadores</span>
-                <small>(10)</small>
-              </label>
-            </li>
+          <div class="category_list">
+            <a href="#" class="category_item centrar" category="all">Todo</a>
+            <a href="#" class="category_item centrar" category="memorias">Memorias</a>
+            <a href="#" class="category_item centrar" category="procesadores">Procesadores</a>
+            <a href="#" class="category_item centrar" category="discos">Discos</a>
+            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
+            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
+            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
+            <a href="#" class="category_item centrar" category="case">Case</a>
+          </div>
 
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Tarjetas Gráficas</span>
-                <small>(7)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span> Placa Madre</span>
-                <small>(3)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Disco Duro</span>
-                <small>(3)</small>
-              </label>
-            </li>
-          </ul>
         </div>
 
-        <div>
+        <!-- <div>
           <div class="block-title">
             <h3>Marcas</h3>
           </div>
 
-          <ul class="block-content">
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Intel</span>
-                <small>(10)</small>
-              </label>
-            </li>
+          <div class="category_list">
+            <a href="#" class="category_item centrar" category="all">Todo</a>
+            <a href="#" class="category_item centrar" category="hyperx">Hyperx</a>
+            <a href="#" class="category_item centrar" category="Toshiba"></a>
+            <a href="#" class="category_item centrar" category="discos">Discos</a>
+            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
+            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
+            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
+            <a href="#" class="category_item centrar" category="case">Case</a>
+          </div>
 
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Ryzen</span>
-                <small>(7)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span> Kingstom</span>
-                <small>(3)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Asus</span>
-                <small>(3)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Hyperx</span>
-                <small>(3)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Hogan</span>
-                <small>(3)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Corsair</span>
-                <small>(3)</small>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Samsung</span>
-                <small>(3)</small>
-              </label>
-            </li>
-          </ul>
-        </div>
+        </div> -->
       </div>
       <div class="col-3-of-4">
         <form action="">
@@ -180,7 +106,7 @@
 
           <?php
             include("con_db.php");
-            $query = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio FROM productoshardware;");
+            $query = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware;");
 
             $result = mysqli_num_rows($query);
 
@@ -188,7 +114,7 @@
               while($data = mysqli_fetch_array($query)){
 
                 ?>
-                <div class="product">
+                <div class="product" category="<?php echo $data['tipo']?>">
                 <div class="img-container">
                 <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo '<img src="'.$data['linkImagen1'].'" alt=""/>'?></a>
                   <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->

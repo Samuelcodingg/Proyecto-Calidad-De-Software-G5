@@ -797,3 +797,27 @@ ul {
         gap: 4rem 0;
     }
 }
+
+/*Categorias*/
+.category_list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.category_list .category_item{
+    display: block;
+    width: 90%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    background: #e4fcfc;
+}
+
+.category_list .ct_item-active {
+    background: #2d3e50;
+    color: white;
+}
+
+.centrar {
+    text-align: center;
+}
