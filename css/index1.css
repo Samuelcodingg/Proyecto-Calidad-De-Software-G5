@@ -57,7 +57,7 @@ nav form .search-data {
     width: 100%;
     height: 100%;
     padding: 0 10px;
-    color: black;
+    color: white;
     font-size: 17px;
     border: none;
     font-weight: 500;
@@ -799,13 +799,13 @@ ul {
 }
 
 /*Categorias*/
-.category_list{
+.category_list {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.category_list .category_item{
+.category_list .category_item {
     display: block;
     width: 90%;
     padding: 15px 0;

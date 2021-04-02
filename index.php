@@ -30,9 +30,9 @@
           <span class="fas fa-search"></span></div>
           <div class="cancel-icon">
           <span class="fas fa-times"></span></div>
-          <form action="#">
-                  <input type="search" class="search-data" placeholder="Buscar" required>
-                  <button type="submit" class="fas fa-search"></button>
+          <form action="results.php" method="get">
+                  <input type="search" name="busqueda" class="search-data" placeholder="Buscar" required>
+                  <button type="submit" name="enviar" class="fas fa-search"></button>
             </form>
           </nav>
     <div class="container">

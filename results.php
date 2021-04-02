@@ -33,7 +33,7 @@
           <div class="cancel-icon">
           <span class="fas fa-times"></span></div>
           <form action="results.php" method="get">
-                  <input type="search" class="search-data" name="busqueda" placeholder="Buscar" required>
+                  <input type="search" name="busqueda" class="search-data" placeholder="Buscar" required>
                   <button type="submit" name="enviar" class="fas fa-search"></button>
             </form>
           </nav>
@@ -106,7 +106,12 @@
 
           <?php
             include("con_db.php");
-            $query = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware;");
+
+            if(isset($_GET['enviar'])){
+              
+              $enviar_query = $_GET['busqueda'];
+
+            $query = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware WHERE nombre LIKE'%$enviar_query%' OR marca LIKE '%$enviar_query%' OR id LIKE '%$enviar_query%' OR tipo LIKE '%$enviar_query%';");
 
             $result = mysqli_num_rows($query);
 
@@ -138,6 +143,8 @@
 <?php
               }
             }
+
+          }
 
           ?>
           
