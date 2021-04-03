@@ -52,13 +52,13 @@
 
           <div class="category_list">
             <a href="#" class="category_item centrar" category="all">Todo</a>
-            <a href="#" class="category_item centrar" category="memorias">Memorias</a>
-            <a href="#" class="category_item centrar" category="procesadores">Procesadores</a>
-            <a href="#" class="category_item centrar" category="discos">Discos</a>
-            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
-            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
-            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
-            <a href="#" class="category_item centrar" category="case">Case</a>
+            <a href="#" class="category_item centrar" category="Memoria">Memorias</a>
+            <a href="#" class="category_item centrar" category="Procesador">Procesadores</a>
+            <a href="#" class="category_item centrar" category="Disco">Discos</a>
+            <a href="#" class="category_item centrar" category="Monitor">Monitores</a>
+            <a href="#" class="category_item centrar" category="Placa Madre">Placa Madre</a>
+            <a href="#" class="category_item centrar" category="Teclado">Teclados</a>
+            <a href="#" class="category_item centrar" category="Case">Case</a>
           </div>
 
         </div>
@@ -142,14 +142,7 @@
           ?>
           
         </div>
-
-        <!-- PAGINATION -->
-        <ul class="pagination">
-          <span>1</span>
-          <span>2</span>
-          <span class="icon">››</span>
-          <span class="last">Last »</span>
-        </ul>
+        
       </div>
     </div>
   </section>
