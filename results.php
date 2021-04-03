@@ -144,6 +144,10 @@
               }
             }
 
+            else{
+              echo "No se han encontrado resultados para '<b>".$enviar_query."</b>'.";
+            }
+
           }
 
           ?>
