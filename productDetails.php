@@ -29,7 +29,7 @@
             <div class="menu-icon">
           <span class="fas fa-bars"></span></div>
           <div class="logo">
-            <img src="image/Logo HadtecSoft (1).png" width="125px"></div>
+          <a href="index.php"><img src="image/Logo HadtecSoft (1).png" width="125px"></a></div>
           <div class="nav-items">
           <li><a href="index.php">Inicio</a></li>
           <li><a href="#">Nosotros</a></li>
@@ -57,7 +57,7 @@
         <div class="main">
           <?php echo '<img src="'.$dataProduct['linkImagen1'].'" alt=""/>'?>
         </div>
-        <div class="thumbnails">
+        <!-- <div class="thumbnails">
           <div class="thumbnail">
             <?php echo '<img src="'.$dataProduct['linkImagen2'].'" alt=""/>'?>
           </div>
@@ -70,7 +70,7 @@
           <div class="thumbnail">
             <?php echo '<img src="'.$dataProduct['linkImagen5'].'" alt=""/>'?>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="right">
         <span><?php echo 'Home/'.$dataProduct['tipo']?></span>

@@ -18,7 +18,7 @@
             <div class="menu-icon">
           <span class="fas fa-bars"></span></div>
           <div class="logo">
-            <img src="image/Logo HadtecSoft (1).png" width="125px"></div>
+          <a href="index.php"><img src="image/Logo HadtecSoft (1).png" width="125px"></a></div>
           <div class="nav-items">
           <li><a href="index.php">Inicio</a></li>
           <li><a href="#">Nosotros</a></li>
