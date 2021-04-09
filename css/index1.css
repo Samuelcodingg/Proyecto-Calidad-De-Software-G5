@@ -821,3 +821,10 @@ ul {
 .centrar {
     text-align: center;
 }
+
+/*boton*/
+.borrar-borde {
+    border: none;
+    background-color: white;
+    margin-left: 20px;
+}

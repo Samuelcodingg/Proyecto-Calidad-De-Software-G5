@@ -52,44 +52,25 @@
 
           <div class="category_list">
             <a href="#" class="category_item centrar" category="all">Todo</a>
-            <a href="#" class="category_item centrar" category="memorias">Memorias</a>
-            <a href="#" class="category_item centrar" category="procesadores">Procesadores</a>
-            <a href="#" class="category_item centrar" category="discos">Discos</a>
-            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
-            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
-            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
-            <a href="#" class="category_item centrar" category="case">Case</a>
+            <a href="#" class="category_item centrar" category="Memoria">Memorias</a>
+            <a href="#" class="category_item centrar" category="Procesador">Procesadores</a>
+            <a href="#" class="category_item centrar" category="Disco">Discos</a>
+            <a href="#" class="category_item centrar" category="Monitor">Monitores</a>
+            <a href="#" class="category_item centrar" category="Placa Madre">Placa Madre</a>
+            <a href="#" class="category_item centrar" category="Teclado">Teclados</a>
+            <a href="#" class="category_item centrar" category="Case">Case</a>
           </div>
 
         </div>
 
-        <!-- <div>
-          <div class="block-title">
-            <h3>Marcas</h3>
-          </div>
-
-          <div class="category_list">
-            <a href="#" class="category_item centrar" category="all">Todo</a>
-            <a href="#" class="category_item centrar" category="hyperx">Hyperx</a>
-            <a href="#" class="category_item centrar" category="Toshiba"></a>
-            <a href="#" class="category_item centrar" category="discos">Discos</a>
-            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
-            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
-            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
-            <a href="#" class="category_item centrar" category="case">Case</a>
-          </div>
-
-        </div> -->
       </div>
       <div class="col-3-of-4">
-        <form action="">
+        <form action="" method="get">
           <div class="item">
             <label for="sort-by">Sort By</label>
             <select name="sort-by" id="sort-by">
               <option value="title" selected="selected">Name</option>
               <option value="number">Price</option>
-              <option value="search_api_relevance">Relevance</option>
-              <option value="created">Newness</option>
             </select>
           </div>
           <div class="item">
@@ -99,7 +80,7 @@
               <option value="DESC">DESC</option>
             </select>
           </div>
-          <a href="">Apply</a>
+          <input type="submit" class="borrar-borde" value="Apply">
         </form>
 
         <div class="product-layout">
@@ -111,45 +92,82 @@
             $result = mysqli_num_rows($query);
 
             if($result > 0){
-              while($data = mysqli_fetch_array($query)){
-
-                ?>
-                <div class="product" category="<?php echo $data['tipo']?>">
-                <div class="img-container">
-                <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo '<img src="'.$data['linkImagen1'].'" alt=""/>'?></a>
-                  <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->
-                  <div class="addCart">
-                    <i class="fas fa-shopping-cart"></i>
+              if(isset($_GET['sort-by'])){
+                if($_GET['sort-by']=="number"){
+                  if($_GET['order-by']=="ASC"){
+                    $query_ordenar = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware ORDER BY precio ASC;");
+                  }
+                  else{
+                    $query_ordenar = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware ORDER BY precio DESC;");
+                  }
+                  
+                }
+                else{
+                  if($_GET['order-by']=="ASC"){
+                    $query_ordenar = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware ORDER BY nombre ASC;");
+                  }
+                  else{
+                    $query_ordenar = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware ORDER BY nombre DESC;");
+                  }
+                }
+                while($data = mysqli_fetch_array($query_ordenar)){
+                  ?>
+                  <div class="product" category="<?php echo $data['tipo']?>">
+                    <div class="img-container">
+                    <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo '<img src="'.$data['linkImagen1'].'" alt=""/>'?></a>
+                    <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->
+                      <div class="addCart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+      
+                    <ul class="side-icons">
+                      <span><i class="fas fa-search"></i></span>
+                      <span><i class="far fa-heart"></i></span>
+                      <span><i class="fas fa-sliders-h"></i></span>
+                    </ul>
                   </div>
-    
-                  <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                  </ul>
-                </div>
-                <div class="bottom">
-                  <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo $data['nombre']?></a>
-                  <div class="price">
-                    <span><?php echo 'S/'.$data['precio'] ?></span>
+                  <div class="bottom">
+                    <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo $data['nombre']?></a>
+                    <div class="price">
+                      <span><?php echo 'S/'.$data['precio'] ?></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-<?php
+  <?php
+                }
+              }
+              else{
+                while($data = mysqli_fetch_array($query)){
+                  ?>
+                  <div class="product" category="<?php echo $data['tipo']?>">
+                    <div class="img-container">
+                    <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo '<img src="'.$data['linkImagen1'].'" alt=""/>'?></a>
+                    <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->
+                      <div class="addCart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+      
+                    <ul class="side-icons">
+                      <span><i class="fas fa-search"></i></span>
+                      <span><i class="far fa-heart"></i></span>
+                      <span><i class="fas fa-sliders-h"></i></span>
+                    </ul>
+                  </div>
+                  <div class="bottom">
+                    <a href="<?php echo 'productDetails.php?id='.$data['id'] ?>"><?php echo $data['nombre']?></a>
+                    <div class="price">
+                      <span><?php echo 'S/'.$data['precio'] ?></span>
+                    </div>
+                  </div>
+                </div>
+  <?php
+                }
               }
             }
 
           ?>
           
-        </div>
-
-        <!-- PAGINATION -->
-        <ul class="pagination">
-          <span>1</span>
-          <span>2</span>
-          <span class="icon">››</span>
-          <span class="last">Last »</span>
-        </ul>
+        </div>        
       </div>
     </div>
   </section>
