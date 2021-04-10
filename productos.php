@@ -21,9 +21,9 @@
           <a href="index.php"><img src="image/Logo HadtecSoft (1).png" width="125px"></a></div>
           <div class="nav-items">
           <li><a href="index.php">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
+          <li><a href="nosotros.php">Nosotros</a></li>
           <li><a href="productos.php">Catálogo</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="contacto.php">Contacto</a></li>
           <li><a href="login.php">Mi cuenta</a></li>
           </div>
           <div class="shopping-icon">
@@ -67,20 +67,20 @@
       <div class="col-3-of-4">
         <form action="" method="get">
           <div class="item">
-            <label for="sort-by">Sort By</label>
+            <label for="sort-by">Filtrar por</label>
             <select name="sort-by" id="sort-by">
-              <option value="title" selected="selected">Name</option>
+              <option value="title" selected="selected">Nombre</option>
               <option value="number">Precio</option>
             </select>
           </div>
           <div class="item">
-            <label for="order-by">Order</label>
+            <label for="order-by">Orden</label>
             <select name="order-by" id="sort-by">
               <option value="ASC" selected="selected">ASC</option>
               <option value="DESC">DESC</option>
             </select>
           </div>
-          <input type="submit" class="borrar-borde" value="Apply">
+          <input type="submit" class="borrar-borde" value="Aplicar">
         </form>
 
         <div class="product-layout">

@@ -22,7 +22,7 @@ body {
 }
 
 .login-page .box {
-    background-image: url(/image/fondologin.jpg);
+    background-image: url(../image/fondologin.jpg);
     background-size: cover;
     background-position: -160px center;
     background-repeat: repeat-x;

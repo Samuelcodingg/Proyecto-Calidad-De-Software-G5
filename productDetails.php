@@ -32,9 +32,9 @@
           <a href="index.php"><img src="image/Logo HadtecSoft (1).png" width="125px"></a></div>
           <div class="nav-items">
           <li><a href="index.php">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
+          <li><a href="nosotros.php">Nosotros</a></li>
           <li><a href="productos.php">Catálogo</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="contacto.php">Contacto</a></li>
           <li><a href="login.php">Mi cuenta</a></li>
           </div>
           <div class="shopping-icon">
