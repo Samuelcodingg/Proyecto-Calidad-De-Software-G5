@@ -70,7 +70,7 @@
             <label for="sort-by">Sort By</label>
             <select name="sort-by" id="sort-by">
               <option value="title" selected="selected">Name</option>
-              <option value="number">Price</option>
+              <option value="number">Precio</option>
             </select>
           </div>
           <div class="item">
