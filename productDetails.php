@@ -49,22 +49,23 @@ include('header.php');
             <input type="text" data-id="<?php echo $dataProduct['stock'] ?>" class="qty_input border px-2 w-100 bg-light" placeholder="1">
             <button data-id="<?php echo $dataProduct['id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
           </div>
-          <!--!Cantidad de producto-->
-          <input type="hidden" name="item_id" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
-          <input type="hidden" name="user_id" value="<?php echo 1 ?>">
-          <?php
-          if (in_array($dataProduct['id'], $Cart->getCartid($product->getData('carrocompras')) ?? [])) {
-            echo '<a href="cart.php" class="btn" type="submit" disabled>En el carrito</a>';
-          } else {
-            echo '<a href="cart.php" class="btn" type="submit">Añadir al carrito</a>';
-          }
-          ?>
-          <h3>Product Detail</h3>
-          <p>
-            <?php echo $dataProduct['descripcion'] ?>
-          </p>
         </div>
+        <!--!Cantidad de producto-->
+        <input type="hidden" name="item_id" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
+        <input type="hidden" name="user_id" value="<?php echo 1 ?>">
+        <?php
+        if (in_array($dataProduct['id'], $Cart->getCartid($product->getData('carrocompras')) ?? [])) {
+          echo '<a href="cart.php" class="btn" type="submit" disabled>En el carrito</a>';
+        } else {
+          echo '<a href="cart.php" class="btn" type="submit">Añadir al carrito</a>';
+        }
+        ?>
+        <h3>Product Detail</h3>
+        <p>
+          <?php echo $dataProduct['descripcion'] ?>
+        </p>
       </div>
+    </div>
   </section>
 
 
