@@ -3,7 +3,7 @@
 include('header.php');
 ?>
 
-<body>
+<!-- <body> -->
   <?php include("con_db.php");
   ob_start();
   $id = $_GET['id'];
@@ -21,22 +21,9 @@ include('header.php');
     <div class="details container">
       <div class="left">
         <div class="main">
-          <?php echo '<img src="' . $dataProduct['linkImagen1'] . '" alt=""/>' ?>
+          <?php echo '<img class="imagen-producto" src="' . $dataProduct['linkImagen1'] . '" alt=""/>' ?>
         </div>
-        <!-- <div class="thumbnails">
-          <div class="thumbnail">
-            <?php echo '<img src="' . $dataProduct['linkImagen2'] . '" alt=""/>' ?>
-          </div>
-          <div class="thumbnail">
-            <?php echo '<img src="' . $dataProduct['linkImagen3'] . '" alt=""/>' ?>
-          </div>
-          <div class="thumbnail">
-            <?php echo '<img src="' . $dataProduct['linkImagen4'] . '" alt=""/>' ?>
-          </div>
-          <div class="thumbnail">
-            <?php echo '<img src="' . $dataProduct['linkImagen5'] . '" alt=""/>' ?>
-          </div>
-        </div> -->
+        
       </div>
       <div class="right">
         <span><?php echo 'Home/' . $dataProduct['tipo'] ?></span>
@@ -68,7 +55,122 @@ include('header.php');
     </div>
   </section>
 
+  <?php
+      include("con_db.php");
+      $id_tableComments=$_GET['id'];
+      $nombreTabla='comentariosproducto'.$id_tableComments;
+      $consultaAux = "SELECT nombre, cantEstrellas, comentario FROM $nombreTabla;";
+      $val = mysqli_query($conex,$consultaAux);
+      if($val !== FALSE){
+        ?>
+        <div id="testimonials">
+      <div class="testimonial-heading">
+        <span>Comentarios</span>
+        <h1>Clientes dicen</h1>
+      </div>
 
+      <div class="testimonial-box-container">
+
+      <?php
+        while($dataComments = mysqli_fetch_array($val)){
+          ?>
+            <div class="testimonial-box">
+          <div class="box-top">
+            <div class="profile">
+              <div class="profile-img">
+                <img src="image/bbb9d3f5-52f0-4feb-8b11-c6d2004ef41a.jpg" alt="asdasd">
+              </div>
+              <div class="name-user">
+                <strong><?php echo $dataComments['nombre']; ?></strong>
+              </div>
+            </div>
+            <div class="reviews">
+              <?php
+                echo '<strong>'.$dataComments['cantEstrellas'].'       '.'</strong>';
+                for($i=0;$i<$dataComments['cantEstrellas'];$i++){
+                  echo '<i class="fas fa-star"></i>';
+                }
+              ?>
+              <!-- <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> -->
+            </div>
+          </div>
+          <div class="client-comment">
+            <p><?php echo $dataComments['comentario']; ?></p>
+          </div>
+        </div>
+
+<?php
+        }
+      
+      
+      ?>
+      </div>
+    </div>
+    <?php
+
+      }
+      else{
+        $consultaCrear="CREATE TABLE `registro`.`$nombreTabla` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nombre` VARCHAR(100) NOT NULL , `cantEstrellas` INT(1) NOT NULL , `comentario` VARCHAR(300) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;";
+        $queryCrear = mysqli_query($conex,$consultaCrear);
+      }
+    
+    ?>
+  </section>
+
+
+  <section class="w3-content w3-container w3-padding-64" id="contacto">
+        <h3 class="">DEJA UN COMENTARIO</h3>
+        <p class="">Nos importa tu opinión</p>
+        <div class="w3-row w3-padding-32 w3-section">
+            <!-- <div class="w3-col m4 w3-container">
+                <img src="image/Ubicación-negocio.jpg" class="w3-image w3-round" style="width: 100%;">
+            </div> -->
+            <div class="w3-col m8 w3-panel">
+                
+                <form action="" method="POST" target="_blank">
+                    <div class="w3-row-padding" style="margin: 0 -16px 8px -16px;">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Introduzca su nombre" name="Nombre" required>
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="number" placeholder="Introduzca cantidad de estrellas" name="numero" required>
+                        </div>
+                    </div>
+                    <textarea class="w3-input w3-border" placeholder="Introduzca su mensaje" rows="4" name="message"></textarea>
+                    <button class="w3-button w3-theme-d4 w3-right w3-section" name="enviar"><i class="fas fa-paper-plane"></i>ENVIAR COMENTARIO</button>
+                </form>
+
+                <?php
+                  if(isset($_POST['enviar'])){
+                    if(strlen($_POST['Nombre'])>=1 && strlen($_POST['numero'])>=1 && strlen($_POST['message'])>=1){
+                        $name = trim($_POST['Nombre']);
+                        $number = trim($_POST['numero']);
+                        $mensaje = trim($_POST['message']);
+                        $consulta = "INSERT INTO $nombreTabla(nombre, cantEstrellas, comentario) VALUES ('$name','$number','$mensaje')";
+                        $resultado = mysqli_query($conex,$consulta);
+                        if($resultado){
+                            ?>
+                            <?php
+                                header("Location: productDetails.php?id=".urlencode($id_tableComments));
+                        }
+                        else{
+                            ?>
+                            <?php
+                        }
+                    }
+                    else{
+                        ?>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
+        </div>
+    </section>
 
   <!-- Footer -->
   <div class="footer">

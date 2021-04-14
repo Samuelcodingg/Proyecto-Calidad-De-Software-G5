@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HADTECSOFT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/w3.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/w3-theme-pink.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/index.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/index1.css?v=<?php echo time(); ?>">
     <script src="js/jquery-3.6.0.js?v=<?php echo time(); ?>"></script>
     <script src="js/mostrar.js?v=<?php echo time(); ?>"></script>
