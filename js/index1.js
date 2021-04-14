@@ -2,7 +2,7 @@ const menuBtn = document.querySelector(".menu-icon span");
     const searchBtn = document.querySelector(".search-icon");
     const cancelBtn = document.querySelector(".cancel-icon");
     const items = document.querySelector(".nav-items");
-    const form = document.querySelector("form");
+    const searchForm = document.querySelector("div.busca form[name='busc']");
     menuBtn.onclick = ()=>{
       items.classList.add("active");
       menuBtn.classList.add("hide");
@@ -14,11 +14,74 @@ const menuBtn = document.querySelector(".menu-icon span");
       menuBtn.classList.remove("hide");
       searchBtn.classList.remove("hide");
       cancelBtn.classList.remove("show");
-      form.classList.remove("active");
+      searchForm.classList.remove("active");
       cancelBtn.style.color = "#ff3d00";
     }
     searchBtn.onclick = ()=>{
-      form.classList.add("active");
+      searchForm.classList.add("active");
       searchBtn.classList.add("hide");
       cancelBtn.classList.add("show");
     }
+
+
+
+    // product qty section
+    let $qty_up = $(".qty .qty-up");
+    let $qty_down = $(".qty .qty-down");
+    let $deal_price = $("#deal-price");
+    // let $input = $(".qty .qty_input");
+
+    // click on qty up button
+    $qty_up.click(function(e){
+
+      let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
+      let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
+
+      // change product price using ajax call
+      $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
+              let obj = JSON.parse(result);
+              let item_price = obj[0]['precio'];
+
+              if($input.val() >= 1 && $input.val() <= 9){
+                  $input.val(function(i, oldval){
+                      return ++oldval;
+                  });
+
+                  // increase price of the product
+                  $price.text(parseInt(item_price * $input.val()).toFixed(2));
+
+                  // set subtotal price
+                  let subtotal = parseInt($deal_price.text()) + parseInt(item_price);
+                  $deal_price.text(subtotal.toFixed(2));
+              }
+
+          }}); // closing ajax request
+  }); // closing qty up button
+
+  // click on qty down button
+  $qty_down.click(function(e){
+
+      let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
+      let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
+
+      // change product price using ajax call
+      $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
+              let obj = JSON.parse(result);
+              let item_price = obj[0]['precio'];
+
+              if($input.val() > 1 && $input.val() <= 10){
+                  $input.val(function(i, oldval){
+                      return --oldval;
+                  });
+
+
+                  // increase price of the product
+                  $price.text(parseInt(item_price * $input.val()).toFixed(2));
+
+                  // set subtotal price
+                  let subtotal = parseInt($deal_price.text()) - parseInt(item_price);
+                  $deal_price.text(subtotal.toFixed(2));
+              }
+
+          }}); // closing ajax request
+  }); // closing qty down button

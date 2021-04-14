@@ -43,7 +43,7 @@ nav .nav-items li a:hover {
     color: #ff3d00;
 }
 
-nav form {
+nav [name="busc"] {
     display: flex;
     height: 40px;
     padding: 2px;
@@ -53,7 +53,7 @@ nav form {
     border: none;
 }
 
-nav form .search-data {
+nav [name="busc"] .search-data {
     width: 100%;
     height: 100%;
     padding: 0 10px;
@@ -64,7 +64,7 @@ nav form .search-data {
     background: none;
 }
 
-nav form button {
+nav [name="busc"] button {
     padding: 0 15px;
     color: #555;
     font-size: 17px;
@@ -74,7 +74,7 @@ nav form button {
     cursor: pointer;
 }
 
-nav form button:hover {
+nav .busc button:hover {
     background: white;
 }
 
@@ -139,7 +139,7 @@ nav .search-icon {
         font-size: 20px;
     }
 
-    nav form {
+    nav [name="busc"] {
         position: absolute;
         top: 80px;
         right: 50px;
@@ -148,13 +148,13 @@ nav .search-icon {
         transition: top 0.3s ease, opacity 0.1s ease;
     }
 
-    nav form.active {
+    nav [name="busc"].active {
         top: 95px;
         opacity: 1;
         pointer-events: auto;
     }
 
-    nav form:before {
+    nav [name="busc"]:before {
         position: absolute;
         content: "";
         top: -13px;
@@ -167,7 +167,7 @@ nav .search-icon {
         margin: -20px 0 0;
     }
 
-    nav form:after {
+    nav [name="busc"]:after {
         position: absolute;
         content: '';
         height: 60px;
@@ -213,7 +213,7 @@ nav .logo.space {
         margin: 0 20px;
     }
 
-    nav form {
+    nav [name="busc"] {
         right: 30px;
     }
 }
