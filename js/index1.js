@@ -42,16 +42,16 @@ const menuBtn = document.querySelector(".menu-icon span");
               let obj = JSON.parse(result);
               let item_price = obj[0]['precio'];
 
-              if($input.val() >= 1 && $input.val() <= 9){
+              if($input.val() >= 1 && $input.val() <= ['stock'-1]){
                   $input.val(function(i, oldval){
                       return ++oldval;
                   });
 
                   // increase price of the product
-                  $price.text(parseInt(item_price * $input.val()).toFixed(2));
+                  $price.text(parseInt(precio * $input.val()).toFixed(2));
 
                   // set subtotal price
-                  let subtotal = parseInt($deal_price.text()) + parseInt(item_price);
+                  let subtotal = parseInt($deal_price.text()) + parseInt(precio);
                   $deal_price.text(subtotal.toFixed(2));
               }
 
@@ -69,17 +69,17 @@ const menuBtn = document.querySelector(".menu-icon span");
               let obj = JSON.parse(result);
               let item_price = obj[0]['precio'];
 
-              if($input.val() > 1 && $input.val() <= 10){
+              if($input.val() > 1 && $input.val() <= ['stock']){
                   $input.val(function(i, oldval){
                       return --oldval;
                   });
 
 
                   // increase price of the product
-                  $price.text(parseInt(item_price * $input.val()).toFixed(2));
+                  $price.text(parseInt(precio * $input.val()).toFixed(2));
 
                   // set subtotal price
-                  let subtotal = parseInt($deal_price.text()) - parseInt(item_price);
+                  let subtotal = parseInt($deal_price.text()) - parseInt(precio);
                   $deal_price.text(subtotal.toFixed(2));
               }
 

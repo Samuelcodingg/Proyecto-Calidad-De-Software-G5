@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/index1.css">
-  <title>HADTECSOFT</title>
-</head>
+<?php
+// include header.php file
+include('header.php');
+?>
 
 <body>
   <?php include("con_db.php");
@@ -28,40 +15,6 @@
   }
 
   ?>
-  <!-- Navigation -->
-  <div class="header">
-    <nav>
-      <div class="menu-icon">
-        <span class="fas fa-bars"></span>
-      </div>
-      <div class="logo">
-        <img src="image/Logo HadtecSoft (1).png" width="125px">
-      </div>
-      <div class="nav-items">
-        <li><a href="index.php">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="productos.php">Catálogo</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="login.php">Mi cuenta</a></li>
-      </div>
-      <div class="shopping-icon">
-        <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
-          <span class="font-size-16 px-2 text-black"><i class="fas fa-shopping-cart"></i></span>
-          <span class="px-3 py-2 rounded-pill text-light bg-dark"><?php echo count($product->getData('carrocompras')); ?></span>
-        </a>
-      </div>
-      <div class="search-icon">
-        <span class="fas fa-search"></span>
-      </div>
-      <div class="cancel-icon">
-        <span class="fas fa-times"></span>
-      </div>
-      <form action="results.php" method="get">
-        <input type="search" name="busqueda" class="search-data" placeholder="Buscar" required>
-        <button type="submit" name="enviar" class="fas fa-search"></button>
-      </form>
-    </nav>
-  </div>
 
   <!-- Product Details -->
   <section class="section product-detail">
@@ -89,27 +42,29 @@
         <span><?php echo 'Home/' . $dataProduct['tipo'] ?></span>
         <h1><?php echo $dataProduct['nombre'] ?></h1>
         <div class="price"><?php echo 'S/' . $dataProduct['precio'] ?></div>
-
-        <form class="form">
-          <input type="text" placeholder="<?php echo $dataProduct['stock'] ?>" />
-          <form method="post">
-            <input type="hidden" name="item_id" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
-            <input type="hidden" name="user_id" value="<?php echo 1 ?>">
-            <?php
-            if (in_array($dataProduct['item_id'], $Cart->getCartid($product->getData('carrocompras')) ?? [])) {
-              echo '<a href="cart.html" class="addCart" type="submit" disabled>En el carrito</a>';
-            } else {
-              echo '<a href="cart.html" class="addCart" type="submit">Añadir al carrito</a>';
-            }
-            ?>
-          </form>
-        </form>
-        <h3>Product Detail</h3>
-        <p>
-          <?php echo $dataProduct['descripcion'] ?>
-        </p>
+        <!--Cantidad de producto-->
+        <div class="qty d-flex pt-2">
+          <div class="d-flex font-rale w-25">
+            <button class="qty-up border bg-light" data-id="<?php echo $dataProduct['id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
+            <input type="text" data-id="<?php echo $dataProduct['stock'] ?>" class="qty_input border px-2 w-100 bg-light" placeholder="1">
+            <button data-id="<?php echo $dataProduct['id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
+          </div>
+          <!--!Cantidad de producto-->
+          <input type="hidden" name="item_id" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
+          <input type="hidden" name="user_id" value="<?php echo 1 ?>">
+          <?php
+          if (in_array($dataProduct['id'], $Cart->getCartid($product->getData('carrocompras')) ?? [])) {
+            echo '<a href="cart.php" class="btn" type="submit" disabled>En el carrito</a>';
+          } else {
+            echo '<a href="cart.php" class="btn" type="submit">Añadir al carrito</a>';
+          }
+          ?>
+          <h3>Product Detail</h3>
+          <p>
+            <?php echo $dataProduct['descripcion'] ?>
+          </p>
+        </div>
       </div>
-    </div>
   </section>
 
 

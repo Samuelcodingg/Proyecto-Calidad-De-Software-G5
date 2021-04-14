@@ -1,10 +1,14 @@
   
 <?php
 
+// require MySQL Connection
+require('Database/DBController.php');
+
+// require Product Class
+require('Database/Product.php');
 
 // require Cart Class
-require('cart.php');
-
+require('Database/Cart.php');
 
 // DBController object
 $db = new DBController();
@@ -15,3 +19,4 @@ $product_shuffle = $product->getData();
 
 // Cart object
 $Cart = new Cart($db);
+?>
