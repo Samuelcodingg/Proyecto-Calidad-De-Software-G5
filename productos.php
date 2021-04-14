@@ -77,20 +77,20 @@
       <div class="col-3-of-4">
         <form action="" method="get">
           <div class="item">
-            <label for="sort-by">Sort By</label>
+            <label for="sort-by">Filtrar por</label>
             <select name="sort-by" id="sort-by">
-              <option value="title" selected="selected">Name</option>
+              <option value="title" selected="selected">Nombre</option>
               <option value="number">Precio</option>
             </select>
           </div>
           <div class="item">
-            <label for="order-by">Order</label>
+            <label for="order-by">Orden</label>
             <select name="order-by" id="sort-by">
               <option value="ASC" selected="selected">ASC</option>
               <option value="DESC">DESC</option>
             </select>
           </div>
-          <input type="submit" class="borrar-borde" value="Apply">
+          <input type="submit" class="borrar-borde" value="Aplicar">
         </form>
 
         <div class="product-layout">

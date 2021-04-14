@@ -70,7 +70,7 @@
         <div class="main">
           <?php echo '<img src="' . $dataProduct['linkImagen1'] . '" alt=""/>' ?>
         </div>
-        <div class="thumbnails">
+        <!-- <div class="thumbnails">
           <div class="thumbnail">
             <?php echo '<img src="' . $dataProduct['linkImagen2'] . '" alt=""/>' ?>
           </div>
@@ -83,7 +83,7 @@
           <div class="thumbnail">
             <?php echo '<img src="' . $dataProduct['linkImagen5'] . '" alt=""/>' ?>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="right">
         <span><?php echo 'Home/' . $dataProduct['tipo'] ?></span>

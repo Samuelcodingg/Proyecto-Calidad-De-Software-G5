@@ -62,13 +62,13 @@
 
           <div class="category_list">
             <a href="#" class="category_item centrar" category="all">Todo</a>
-            <a href="#" class="category_item centrar" category="memorias">Memorias</a>
-            <a href="#" class="category_item centrar" category="procesadores">Procesadores</a>
-            <a href="#" class="category_item centrar" category="discos">Discos</a>
-            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
-            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
-            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
-            <a href="#" class="category_item centrar" category="case">Case</a>
+            <a href="#" class="category_item centrar" category="Memoria">Memorias</a>
+            <a href="#" class="category_item centrar" category="Procesador">Procesadores</a>
+            <a href="#" class="category_item centrar" category="Disco">Discos</a>
+            <a href="#" class="category_item centrar" category="Monitor">Monitores</a>
+            <a href="#" class="category_item centrar" category="Placa Madre">Placa Madre</a>
+            <a href="#" class="category_item centrar" category="Teclado">Teclados</a>
+            <a href="#" class="category_item centrar" category="Case">Case</a>
           </div>
 
         </div>
@@ -92,24 +92,22 @@
         </div> -->
       </div>
       <div class="col-3-of-4">
-        <form action="">
+        <form action="" method="get">
           <div class="item">
-            <label for="sort-by">Sort By</label>
+            <label for="sort-by">Filtrar por</label>
             <select name="sort-by" id="sort-by">
-              <option value="title" selected="selected">Name</option>
-              <option value="number">Price</option>
-              <option value="search_api_relevance">Relevance</option>
-              <option value="created">Newness</option>
+              <option value="title" selected="selected">Nombre</option>
+              <option value="number">Precio</option>
             </select>
           </div>
           <div class="item">
-            <label for="order-by">Order</label>
+            <label for="order-by">Orden</label>
             <select name="order-by" id="sort-by">
               <option value="ASC" selected="selected">ASC</option>
               <option value="DESC">DESC</option>
             </select>
           </div>
-          <a href="">Apply</a>
+          <input type="submit" class="borrar-borde" value="Aplicar">
         </form>
 
         <div class="product-layout">
