@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/647c5e73f8.js" crossorigin="anonymous"></script>
     <?php
     // require functions.php file
-    require('functions.php');
+
     ?>
 </head>
 
@@ -38,9 +38,9 @@
                 <li><a href="login.php">Mi cuenta</a></li>
             </div>
             <div class="shopping-icon">
-                <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
+                <a href="cart(nuevo).php" class="py-2 rounded-pill color-primary-bg">
                     <span class="font-size-16 px-2 text-black"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="px-3 py-2 rounded-pill text-light bg-dark"><?php echo count($product->getData('carrocompras')); ?></span>
+                    <span class="px-3 py-2 rounded-pill text-light bg-dark"></span>
                 </a>
             </div>
             <div class="search-icon">

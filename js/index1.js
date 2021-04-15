@@ -35,14 +35,14 @@ const menuBtn = document.querySelector(".menu-icon span");
     $qty_up.click(function(e){
 
       let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
-      let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
+      let $price = $(`.price[data-id='${$(this).data("id")}']`);
 
       // change product price using ajax call
       $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
               let obj = JSON.parse(result);
-              let item_price = obj[0]['precio'];
+              let precio = obj[0]['precio'];
 
-              if($input.val() >= 1 && $input.val() <= ['stock'-1]){
+              if($input.val() >= 1 && $input.val() <= 9){
                   $input.val(function(i, oldval){
                       return ++oldval;
                   });
@@ -62,14 +62,14 @@ const menuBtn = document.querySelector(".menu-icon span");
   $qty_down.click(function(e){
 
       let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
-      let $price = $(`.product_price[data-id='${$(this).data("id")}']`);
+      let $price = $(`.price[data-id='${$(this).data("id")}']`);
 
       // change product price using ajax call
       $.ajax({url: "template/ajax.php", type : 'post', data : { itemid : $(this).data("id")}, success: function(result){
               let obj = JSON.parse(result);
               let item_price = obj[0]['precio'];
 
-              if($input.val() > 1 && $input.val() <= ['stock']){
+              if($input.val() > 1 && $input.val() <= 10){
                   $input.val(function(i, oldval){
                       return --oldval;
                   });

@@ -67,7 +67,7 @@
             <div class="row-special d-flex">
                 <div class="col-sm-9">
                     <?php
-                    foreach ($product->getData('cart') as $item);
+                    foreach ($product->getData('carrocompras') as $item);
                     $cart = $product->getProduct($item['item_id']);
                     $subTotal[] = array_map(function ($item) {
                     ?>
