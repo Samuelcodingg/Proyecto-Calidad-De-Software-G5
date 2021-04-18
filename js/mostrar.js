@@ -12,13 +12,13 @@ $(document).ready(function(){
         $(this).addClass('ct_item-active');
 
         //ocultando productos
-        $('.product').hide();
+        $('.card').hide();
         
         //mostrando productos
-        $('.product[category="'+catProduct+'"]').show();
+        $('.card[category="'+catProduct+'"]').show();
     });
 
     $('.category_item[category="all"]').click(function(){
-        $('.product').show();
+        $('.card').show();
     });
 });

@@ -47,7 +47,9 @@ include('header.php');
           <input type="submit" class="borrar-borde" value="Aplicar">
         </form>
 
-        <div class="product-layout">
+        <div id="lista-productos">
+
+        <div class="product-layout card-deck mb-3 text-center">
 
           <?php
           include("con_db.php");
@@ -72,52 +74,50 @@ include('header.php');
               }
               while ($data = mysqli_fetch_array($query_ordenar)) {
           ?>
-                <div class="product" category="<?php echo $data['tipo'] ?>">
-                  <div class="img-container">
-                    <a href="<?php echo 'productDetails.php?id=' . $data['id'] ?>"><?php echo '<img src="' . $data['linkImagen1'] . '" alt=""/>' ?></a>
-                    <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->
-                    <div class="addCart">
-                      <i class="fas fa-shopping-cart"></i>
+                
+                <div class="card mb-4 shadow-sm" category="<?php echo $data['tipo']; ?>">
+                    <div class="card-header">
+                    <a href="<?php echo 'productDetails.php?id='.$data['id']?>"><h4 class="my-0 font-weight-bold"><?php echo $data['nombre'] ?></h4></a>
                     </div>
-
-                    <ul class="side-icons">
-                      <span><i class="fas fa-search"></i></span>
-                      <span><i class="far fa-heart"></i></span>
-                      <span><i class="fas fa-sliders-h"></i></span>
-                    </ul>
-                  </div>
-                  <div class="bottom">
-                    <a href="<?php echo 'productDetails.php?id=' . $data['id'] ?>"><?php echo $data['nombre'] ?></a>
-                    <div class="price">
-                      <span><?php echo 'S/' . $data['precio'] ?></span>
+                    <div class="card-body">
+                        <!-- <img src="img/dell.jpg" class="card-img-top"> -->
+                        <a href="<?php echo 'productDetails.php?id='.$data['id']?>"><?php echo '<img src="' . $data['linkImagen1'] . '" class="card-img-top"/>' ?></a>
+                        <!-- <?php// echo '<img src="' . $data['linkImagen1'] . '" class="card-img-top"/>' ?> -->
+                        <h1 class="card-title pricing-card-title precio">S/. <span class=""><?php echo $data['precio'] ?></span></h1>
+                        <!-- <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>8 GB RAM</li>
+                            <li>COLOR NEGRO</li>
+                            <li>1 TB DD</li>
+                        </ul> -->
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="<?php echo $data['id']?>">Comprar</a>
                     </div>
-                  </div>
                 </div>
               <?php
               }
             } else {
               while ($data = mysqli_fetch_array($query)) {
               ?>
-                <div class="product" category="<?php echo $data['tipo'] ?>">
-                  <div class="img-container">
-                    <a href="<?php echo 'productDetails.php?id=' . $data['id'] ?>"><?php echo '<img src="' . $data['linkImagen1'] . '" alt=""/>' ?></a>
-                    <!-- <img src="image/Procesadores-Intel-Core-i7-6.jpg" alt="" /> -->
-                    <div class="addCart">
-                      <i class="fas fa-shopping-cart"></i>
-                    </div>
+                
 
-                    <ul class="side-icons">
-                      <span><i class="fas fa-search"></i></span>
-                      <span><i class="far fa-heart"></i></span>
-                      <span><i class="fas fa-sliders-h"></i></span>
-                    </ul>
-                  </div>
-                  <div class="bottom">
-                    <a href="<?php echo 'productDetails.php?id=' . $data['id'] ?>"><?php echo $data['nombre'] ?></a>
-                    <div class="price">
-                      <span><?php echo 'S/' . $data['precio'] ?></span>
+                <div class="card mb-4 shadow-sm" category="<?php echo $data['tipo'] ?>">
+                    <div class="card-header">
+                    <a href="<?php echo 'productDetails.php?id='.$data['id']?>"><h4 class="my-0 font-weight-bold"><?php echo $data['nombre'] ?></h4></a>
+                    
                     </div>
-                  </div>
+                    <div class="card-body">
+                        <!-- <img src="img/dell.jpg" class="card-img-top"> -->
+                        <?php echo '<a href="productDetails.php?id='.$data['id'].'"><img src="' . $data['linkImagen1'] . '" class="card-img-top"/></a>' ?>
+                        <h1 class="card-title pricing-card-title precio">S/. <span class=""><?php echo $data['precio'] ?></span></h1>
+                        <!-- <a href="index.php">s</a> -->
+                        <!-- <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>8 GB RAM</li>
+                            <li>COLOR NEGRO</li>
+                            <li>1 TB DD</li>
+                        </ul> -->
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="<?php echo $data['id']?>">Comprar</a>
+                    </div>
                 </div>
           <?php
               }
@@ -126,6 +126,7 @@ include('header.php');
 
           ?>
 
+        </div>
         </div>
       </div>
     </div>
@@ -168,7 +169,13 @@ include('header.php');
     </div>
   </div>
   <!--JS-->
-  <script src="js/index1.js"></script>
+  
+  <script src="js/index1.js?v=<?php echo time(); ?>"></script>
+  <script src="js/jquery-3.4.1.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/bootstrap.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/sweetalert2.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/carrito.js?v=<?php echo time(); ?>"></script>
+    <script src="js/pedido.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>

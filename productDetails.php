@@ -56,7 +56,7 @@ $dataUsuario = mysqli_fetch_array($queryusuario);
             }
           }
           ?>-->
-      <h3>Product Detail</h3>
+      <h3>Detalles del Producto</h3>
       <p>
         <?php echo $dataProduct['descripcion'] ?>
       </p>
@@ -219,6 +219,12 @@ if ($val !== FALSE) {
 <script src="js/index.js"></script>
 <script src="js/index1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="js/index1.js?v=<?php echo time(); ?>"></script>
+  <script src="js/jquery-3.4.1.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/bootstrap.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/sweetalert2.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/carrito.js?v=<?php echo time(); ?>"></script>
+    <script src="js/pedido.js?v=<?php echo time(); ?>"></script>
 </body>
 
 </html>
