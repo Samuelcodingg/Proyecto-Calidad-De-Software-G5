@@ -33,7 +33,7 @@ function procesarCompra() {
             showConfirmButton: false,
             timer: 2000
         }).then(function () {
-            window.location = "index.html";
+            window.location = "index.php";
         })
     }
     else if (cliente.value === '' || correo.value === '') {
@@ -48,7 +48,30 @@ function procesarCompra() {
     else {
 
         //aqui se coloca el user id generado en el emailJS
-        emailjs.init('user_CEozz2F39lJJOLF5mJiDA')
+        (function(){
+            emailjs.init('user_1vELAcSZVQReePNxseDpF');
+        })();
+
+        const btn = document.getElementById('procesar-compra');
+
+        document.getElementById('procesar-pago')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        const serviceID = 'gmail';
+        const templateID = 'template_b7xnouq';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+            btn.value = 'Send Email';
+            alert('Sent!');
+            }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+            });
+        });
 
         /* AGREGAR DATOS DETALLE DEL PEDIDO A UN TEXT AREA */
         const textArea = document.createElement('textarea');
@@ -71,36 +94,36 @@ function procesarCompra() {
 
         /* ------------------------- */
 
-        document.getElementById('procesar-pago')
-            .addEventListener('submit', function (event) {
-                event.preventDefault();
+        // document.getElementById('procesar-pago')
+        //     .addEventListener('submit', function (event) {
+        //         event.preventDefault();
 
-                const cargandoGif = document.querySelector('#cargando');
-                cargandoGif.style.display = 'block';
+        //         const cargandoGif = document.querySelector('#cargando');
+        //         cargandoGif.style.display = 'block';
 
-                const enviado = document.createElement('img');
-                enviado.src = 'img/mail.gif';
-                enviado.style.display = 'block';
-                enviado.width = '150';
+        //         const enviado = document.createElement('img');
+        //         enviado.src = 'img/mail.gif';
+        //         enviado.style.display = 'block';
+        //         enviado.width = '150';
 
-                const serviceID = 'default_service';
-                const templateID = 'template_3SA9LsqQ';
+        //         const serviceID = 'gmail';
+        //         const templateID = 'template_b7xnouq';
 
-                emailjs.sendForm(serviceID, templateID, this)
-                    .then(() => {
-                        cargandoGif.style.display = 'none';
-                        document.querySelector('#loaders').appendChild(enviado);
+        //         emailjs.sendForm(serviceID, templateID, this)
+        //             .then(() => {
+        //                 cargandoGif.style.display = 'none';
+        //                 document.querySelector('#loaders').appendChild(enviado);
 
-                        setTimeout(() => {
-                            compra.vaciarLocalStorage();
-                            enviado.remove();
-                            window.location = "index.html";
-                        }, 2000);
-                    }, (err) => {
-                        cargandoGif.style.display = 'none';
-                        alert("Error al enviar el email\r\n Response:\n " + JSON.stringify(err));
-                    });
-            });
+        //                 setTimeout(() => {
+        //                     compra.vaciarLocalStorage();
+        //                     enviado.remove();
+        //                     window.location = "index.html";
+        //                 }, 2000);
+        //             }, (err) => {
+        //                 cargandoGif.style.display = 'none';
+        //                 alert("Error al enviar el email\r\n Response:\n " + JSON.stringify(err));
+        //             });
+        //     });
 
 
     }

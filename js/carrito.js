@@ -192,8 +192,14 @@ class Carrito {
             })
         }
         else {
-            location.href = "compra.html";
+            location.href = "compra.php";
         }
+    }
+
+    paginaProducto(e){
+        // e.preventDefault();
+        
+        // location.href = `productDetails.php?id=1`;
     }
 
     //Calcular montos

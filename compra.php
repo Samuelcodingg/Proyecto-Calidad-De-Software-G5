@@ -190,15 +190,16 @@
 
     </div>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/bootstrap.min.js?v=<?php echo time(); ?>"></script>
+    <script src="js/sweetalert2.min.js?v=<?php echo time(); ?>"></script>
 
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js?v=<?php echo time(); ?>"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js?v=<?php echo time(); ?>"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script> -->
 
-    <script src="js/carrito.js"></script>
-    <script src="js/compra.js"></script>
+    <script src="js/carrito.js?v=<?php echo time(); ?>"></script>
+    <script src="js/compra.js?v=<?php echo time(); ?>"></script>
 
 
 </body>

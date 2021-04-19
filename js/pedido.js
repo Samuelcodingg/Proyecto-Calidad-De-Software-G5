@@ -4,8 +4,13 @@ const productos = document.getElementById('lista-productos');
 const listaProductos = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 const procesarPedidoBtn = document.getElementById('procesar-pedido');
+const irPaginaProducto = document.getElementById('prod');
+
+
 
 cargarEventos();
+
+
 
 function cargarEventos(){
 
@@ -23,4 +28,6 @@ function cargarEventos(){
 
     //Enviar pedido a otra pagina
     procesarPedidoBtn.addEventListener('click', (e)=>{carro.procesarPedido(e)});
+
+    irPaginaProducto.addEventListener('click', (e)=>{carro.paginaProducto(e)});
 }
