@@ -129,7 +129,7 @@
                                         <th scope="col">Precio</th>
                                         <th scope="col">Cantidad</th>
                                         <th scope="col">Sub Total</th>
-                                        <th scope="col">Eliminar</th>
+                                        <!-- <th scope="col">Eliminar</th> -->
                                     </tr>
 
                                 </thead>
@@ -167,7 +167,7 @@
 
                         <div class="row justify-content-between">
                             <div class="col-md-4 mb-2">
-                                <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
+                                <a href="productos.php" class="btn btn-info btn-block">Seguir comprando</a>
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <input type="submit" class="btn btn-success btn-block" id="procesar-compra" value="Realizar compra">

@@ -150,7 +150,7 @@ class Carrito {
                 </td>
                 <td id='subtotales'>${producto.precio * producto.cantidad}</td>
                 <td>
-                    <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a>
+                   <!-- <a href="#" class="borrar-producto fas fa-times-circle" style="font-size:30px" data-id="${producto.id}"></a> -->
                 </td>
             `;
             listaCompra.appendChild(row);
