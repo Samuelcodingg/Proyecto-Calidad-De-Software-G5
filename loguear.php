@@ -12,11 +12,11 @@
         if($array['contar']>0){
             $consulta_nombre = "SELECT nombre FROM datos WHERE email='$usuario' and password='$pass'";
             $result = mysqli_query($conex,$consulta_nombre);
-            $nombre = mysqli_fetch_array($result);
+            // $nombre = mysqli_fetch_array($result);
             ?>
             <h1 class="ok">Bienvenido</h1>
             <?php
-            header("refresh:5;url=index.php");
+            // header("refresh:5;url=index.php");
         }
         else{
             ?>
