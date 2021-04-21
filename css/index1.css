@@ -43,7 +43,7 @@ nav .nav-items li a:hover {
     color: #ff3d00;
 }
 
-nav [name="busc"] {
+nav form.busc {
     display: flex;
     height: 40px;
     padding: 2px;
@@ -53,7 +53,7 @@ nav [name="busc"] {
     border: none;
 }
 
-nav [name="busc"] .search-data {
+nav form.busc .search-data {
     width: 100%;
     height: 100%;
     padding: 0 10px;
@@ -64,7 +64,7 @@ nav [name="busc"] .search-data {
     background: none;
 }
 
-nav [name="busc"] button {
+nav form.busc button {
     padding: 0 15px;
     color: #555;
     font-size: 17px;
@@ -74,7 +74,7 @@ nav [name="busc"] button {
     cursor: pointer;
 }
 
-nav .busc button:hover {
+nav form.busc button:hover {
     background: white;
 }
 
@@ -139,22 +139,23 @@ nav .search-icon {
         font-size: 20px;
     }
 
-    nav [name="busc"] {
+    nav form.busc {
         position: absolute;
         top: 80px;
         right: 50px;
         opacity: 0;
         pointer-events: none;
         transition: top 0.3s ease, opacity 0.1s ease;
+        display: flex;
     }
 
-    nav [name="busc"].active {
+    nav form.busc.active {
         top: 95px;
         opacity: 1;
         pointer-events: auto;
     }
 
-    nav [name="busc"]:before {
+    nav form.busc:before {
         position: absolute;
         content: "";
         top: -13px;
@@ -165,9 +166,10 @@ nav .search-icon {
         border: 10px solid transparent;
         border-bottom-color: #1e232b;
         margin: -20px 0 0;
+        display: flex;
     }
 
-    nav [name="busc"]:after {
+    nav form.busc:after {
         position: absolute;
         content: '';
         height: 60px;
@@ -213,7 +215,7 @@ nav .logo.space {
         margin: 0 20px;
     }
 
-    nav [name="busc"] {
+    nav form.busc {
         right: 30px;
     }
 }
@@ -830,19 +832,19 @@ ul {
 }
 
 /*imagen*/
-.imagen-producto{
+.imagen-producto {
     margin-top: 40px;
     height: 320px;
 }
 
-.details{
+.details {
     display: flex;
     /* justify-content: space-between; */
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.right{
+.right {
     margin-left: 50px;
 }
 
@@ -855,7 +857,7 @@ ul {
     width: 100%;
 }
 
-.testimonial-heading{
+.testimonial-heading {
     letter-spacing: 1px;
     margin: 30px 0px;
     padding: 10px 20px;
@@ -873,7 +875,7 @@ ul {
     padding: 10px 20px;
 }
 
-.testimonial-heading span{
+.testimonial-heading span {
     font-size: 1.3rem;
     color: #252525;
     margin-bottom: 10px;
@@ -889,54 +891,63 @@ ul {
     width: 100%;
 }
 
-.testimonial-box{
+.testimonial-box {
     width: 500px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     padding: 20px;
     margin: 15px;
     cursor: pointer;
 }
-.profile-img{
+
+.profile-img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
 }
-.profile-img img{
+
+.profile-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.profile{
+
+.profile {
     display: flex;
     align-items: center;
 }
-.name-user{
+
+.name-user {
     display: flex;
     flex-direction: column;
 }
-.name-user strong{
+
+.name-user strong {
     color: #3d3d3d;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
-.name-user span{
+
+.name-user span {
     color: #979797;
     font-size: 0.8rem;
 }
-.reviews{
+
+.reviews {
     color: #f9d71c;
 }
-.box-top{
+
+.box-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-.client-comment p{
+
+.client-comment p {
     font-size: 0.9rem;
     color: #4b4b4b;
 }
@@ -945,9 +956,9 @@ ul {
 /* .anchar{
     width: 100px;
     /* height: 100px; */
-    /* margin-right: 50px; */
-    /* padding-right: 100px; */
-/* } */ 
+/* margin-right: 50px; */
+/* padding-right: 100px; */
+/* } */
 .blanco {
     color: white;
 }

@@ -1,3 +1,60 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+
+// Include autoload.php file
+require 'vendor/autoload.php';
+// Create object of PHPMailer class
+$mail = new PHPMailer(true);
+
+$output = '';
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        // Gmail ID which you want to use as SMTP server
+        $mail->Username = 'disneyplus.2020.g3@gmail.com';
+        // Gmail Password
+        $mail->Password = 'dp2020is';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        // Email ID from which you want to send the email
+        $mail->setFrom($_POST['email'], $_POST['name']);
+        // Recipient Email ID where you want to receive emails
+        $mail->addAddress('hadtecsoftfisi@gmail.com');
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Form Submission';
+        $mail->Body = "<h4>Nombre : $name <br>Email : $email <br>Mensaje : $message</h4>";
+
+        $mail->send();
+        $output = '<div class="alert alert-success">
+                  <h5>Gracias por contactarnos. Estaremos respondiendo tu consulta muy pronto</h5>
+                </div>';
+    } catch (Exception $e) {
+        $output = '<div class="alert alert-danger">
+                  <h5>' . $e->getMessage() . '</h5>
+                </div>';
+    }
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,6 +63,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HADTECSOFT</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css' />
     <link rel="stylesheet" href="css/bootstrap.min.css?v=<?php echo time(); ?>">
     <script src="js/popper.min.js?v=<?php echo time(); ?>"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css?v=<?php echo time(); ?>" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -85,9 +143,51 @@
             <div class="cancel-icon">
                 <span class="fas fa-times"></span>
             </div>
-            <form class="busc" action="results.php" method="get">
+            <form name="busc" action="results.php" method="get">
                 <input type="search" class="search-data" name="busqueda" placeholder="Buscar" required>
                 <button type="submit" name="enviar" class="fas fa-search"></button>
             </form>
         </nav>
     </div>
+
+    <body class="bg-info">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mt-3">
+                    <div class="card border-danger shadow">
+                        <div class="card-header bg-danger text-light">
+                            <h3 class="card-title">Contacta con Soporte</h3>
+                        </div>
+                        <div class="card-body px-4">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <?= $output; ?>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Ingresa tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-Mail</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Ingresa tu E-Mail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Asunto</label>
+                                    <input type="text" name="subject" id="subject" class="form-control" placeholder="Escribe el asunto" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje</label>
+                                    <textarea name="message" id="message" rows="5" class="form-control" placeholder="Escribe el mensaje" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="submit" value="Enviar" class="btn btn-danger btn-block" id="sendBtn">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
