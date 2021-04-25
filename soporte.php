@@ -96,11 +96,25 @@ if (isset($_POST['submit'])) {
                 <img src="image/Logo HadtecSoft (1).png" width="125px">
             </div>
             <div class="nav-items">
-                <li><a href="index.php">Inicio</a></li>
-                <!-- <li><a href="#">Nosotros</a></li> -->
-                <li><a href="productos.php">Catálogo</a></li>
-                <!-- <li><a href="#">Contacto</a></li> -->
-                <li class="anchar"><a href="login.php">Sesión</a></li>
+            <?php
+                    session_start();
+                    if(!empty($_SESSION['username'])){
+                        $nombre = $_SESSION['username'];
+                        $apellido = $_SESSION['apellido'];
+                        $email = $_SESSION['email'];
+                        ?>
+                            <li><a href="index.php">Inicio</a></li>
+                            <!-- <li><a href="#">Nosotros</a></li> -->
+                            <li><a href="productos.php">Catálogo</a></li>
+                            <li><a href="soporte.php">Contacto</a></li>
+                            <li class="anchar"><a href="#"><?php echo $nombre;?></a></li>
+                            <li><a href="login.php">Salir</a></li>
+                        <?php
+                    }
+                    else{
+                        header("location:login.php");
+                    }
+                ?>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -165,11 +179,11 @@ if (isset($_POST['submit'])) {
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nombre</label>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Ingresa tu nombre" required>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="<?php echo $nombre;?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-Mail</label>
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Ingresa tu E-Mail" required>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="<?php echo $email;?>" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">Asunto</label>
