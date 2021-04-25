@@ -13,7 +13,7 @@
                 ?>
                     <h4 class="ok">Te has registrado correctamente</h4>
                 <?php
-                    echo header("refresh:5;url=index.php");
+                    echo header("refresh:5;url=login.php");
             }
             else{
                 ?>
