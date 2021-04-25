@@ -65,10 +65,10 @@ function procesarCompra() {
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
-            btn.value = 'Send Email';
-            alert('Sent!');
+            btn.value = 'Finalizar Compra';
+            alert('Se confirmó tu compra! Gracias por confiar en HADTECSOFT, acabamos de enviarte un correo.');
             }, (err) => {
-            btn.value = 'Send Email';
+            btn.value = 'Finalizar Compra';
             alert(JSON.stringify(err));
             });
         });

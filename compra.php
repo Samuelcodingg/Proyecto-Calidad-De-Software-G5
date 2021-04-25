@@ -38,7 +38,7 @@
                 <span class="fas fa-bars"></span>
             </div>
             <div class="logo">
-                <img src="image/Logo HadtecSoft (1).png" width="125px">
+                <a href=""><img src="image/Logo HadtecSoft (1).png" width="125px" onclick="window.location.href='index.php'"></a>
             </div>
             <div class="nav-items">
             <?php
@@ -48,8 +48,7 @@
                         $apellido = $_SESSION['apellido'];
                         $email = $_SESSION['email'];
                         ?>
-                            <li><a href="index.php">Inicio</a></li>
-                            <!-- <li><a href="#">Nosotros</a></li> -->
+                            
                             <li><a href="productos.php">Catálogo</a></li>
                             <li><a href="soporte.php">Contacto</a></li>
                             <li class="anchar"><a href="#"><?php echo $nombre;?></a></li>
@@ -64,7 +63,7 @@
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button> -->
-                    <div class="collapse navbar-collapse show" id="navbarCollapse">
+                    <div class="collapse navbar-collapse show" id="navbarCollapse" style="margin-left:300px;">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item dropdown show">
                                 <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="30px"
@@ -124,13 +123,13 @@
                             <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
                             <div class="col-12 col-md-10">
                                 <input type="text" class="form-control" id="cliente"
-                                    placeholder="<?php echo $nombre.' '.$apellido;?>" name="destinatario">
+                                    placeholder="<?php echo $nombre.' '.$apellido;?>" name="destinatario" value="<?php echo $nombre.' '.$apellido;?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
                             <div class="col-12 col-md-10">
-                                <input type="text" class="form-control" id="correo" placeholder="<?php echo $email;?>" name="cc_to">
+                                <input type="text" class="form-control" id="correo" placeholder="<?php echo $email;?>" name="cc_to" value="<?php echo $email;?>">
                             </div>
                         </div>
 

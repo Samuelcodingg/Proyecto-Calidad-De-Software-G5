@@ -43,8 +43,6 @@
                 if (!empty($_SESSION['username'])) {
                     $nombre = $_SESSION['username'];
                 ?>
-                    <li><a href="index.php">Inicio</a></li>
-                    <!-- <li><a href="#">Nosotros</a></li> -->
                     <li><a href="productos.php">Catálogo</a></li>
                     <li><a href="soporte.php">Contacto</a></li>
                     <li class="anchar"><a href="#"><?php echo $nombre; ?></a></li>
@@ -54,12 +52,38 @@
                     header("location:login.php");
                 }
                 ?>
-                <!-- <li><a href="index.php">Inicio</a></li> -->
-                <!-- <li><a href="#">Nosotros</a></li> -->
-                <!-- <li><a href="productos.php">Catálogo</a></li>
-                <li><a href="soporte.php">Contacto</a></li>
-                <li class="anchar"><a href="login.php">Sesión</a></li> -->
-                <div class="collapse navbar-collapse show" id="navbarCollapse">
+                <!-- <div class="collapse navbar-collapse show" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown show">
+                            <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="30px" width="30px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></img>
+                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                <table id="lista-carrito" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                                <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block blanco" style="color:white;">Vaciar Carrito</a>
+                                <a href="#" id="procesar-pedido" class="btn btn-danger btn-block blanco" style="color:white;">Procesar
+                                    Compra</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="search-icon">
+                <span class="fas fa-search"></span>
+            </div>
+            <div class="cancel-icon">
+                <span class="fas fa-times"></span>
+            </div>
+            <div class="collapse navbar-collapse show" style="margin-left:200px;" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown show">
                             <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="30px" width="30px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></img>
@@ -84,22 +108,10 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- <div class="shopping-icon">
-                <a href="cart(nuevo).php" class="py-2 rounded-pill color-primary-bg">
-                    <span class="font-size-16 px-2 text-black"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="px-3 py-2 rounded-pill text-light bg-dark"></span>
-                </a>
-            </div> -->
-            <div class="search-icon">
-                <span class="fas fa-search"></span>
-            </div>
-            <div class="cancel-icon">
-                <span class="fas fa-times"></span>
-            </div>
             <form class="busc" action="results.php" method="get">
                 <input type="search" class="search-data" name="busqueda" placeholder="Buscar" required>
                 <button type="submit" name="enviar" class="fas fa-search"></button>
             </form>
+            
         </nav>
     </div>
