@@ -10,13 +10,16 @@
         $array = mysqli_fetch_array($resultado);
 
         if($array['contar']>0){
-            $consulta_nombre = "SELECT nombre FROM datos WHERE email='$usuario' and password='$pass'";
+            $consulta_nombre = "SELECT name, apellido, email FROM datos WHERE email='$usuario' and password='$pass'";
             $result = mysqli_query($conex,$consulta_nombre);
-            // $nombre = mysqli_fetch_array($result);
+            $datos = mysqli_fetch_array($result);
             ?>
             <h1 class="ok">Bienvenido</h1>
             <?php
-            // header("refresh:5;url=index.php");
+            $_SESSION['username'] = $datos['name'];
+            $_SESSION['apellido'] = $datos['apellido'];
+            $_SESSION['email'] = $datos['email'];
+            header("refresh:5;url=index.php");
         }
         else{
             ?>
