@@ -35,25 +35,24 @@
                 <span class="fas fa-bars"></span>
             </div>
             <div class="logo">
-                <img src="image/Logo HadtecSoft (1).png" width="125px">
+                <img type="button" src="image/Logo HadtecSoft (1).png" width="125px" onclick="window.location.href='index.php'">
             </div>
             <div class="nav-items">
                 <?php
-                    session_start();
-                    if(!empty($_SESSION['username'])){
-                        $nombre = $_SESSION['username'];
-                        ?>
-                            <li><a href="index.php">Inicio</a></li>
-                            <!-- <li><a href="#">Nosotros</a></li> -->
-                            <li><a href="productos.php">Catálogo</a></li>
-                            <li><a href="soporte.php">Contacto</a></li>
-                            <li class="anchar"><a href="#"><?php echo $nombre;?></a></li>
-                            <li><a href="login.php">Salir</a></li>
-                        <?php
-                    }
-                    else{
-                        header("location:login.php");
-                    }
+                session_start();
+                if (!empty($_SESSION['username'])) {
+                    $nombre = $_SESSION['username'];
+                ?>
+                    <li><a href="index.php">Inicio</a></li>
+                    <!-- <li><a href="#">Nosotros</a></li> -->
+                    <li><a href="productos.php">Catálogo</a></li>
+                    <li><a href="soporte.php">Contacto</a></li>
+                    <li class="anchar"><a href="#"><?php echo $nombre; ?></a></li>
+                    <li><a href="login.php">Salir</a></li>
+                <?php
+                } else {
+                    header("location:login.php");
+                }
                 ?>
                 <!-- <li><a href="index.php">Inicio</a></li> -->
                 <!-- <li><a href="#">Nosotros</a></li> -->
