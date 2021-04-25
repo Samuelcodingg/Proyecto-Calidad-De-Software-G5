@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
                 <span class="fas fa-bars"></span>
             </div>
             <div class="logo">
-            <a href=""><img src="image/Logo HadtecSoft (1).png" width="125px" onclick="window.location.href='index.php'"></a>
+            <a href="index.php"><img src="image/Logo HadtecSoft (1).png" width="125px" onclick="window.location.href='index.php'"></a>
             </div>
             <div class="nav-items">
             <?php
