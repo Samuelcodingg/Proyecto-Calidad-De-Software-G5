@@ -12,7 +12,7 @@
     <div class="login-page">
         <div class="box">
             <div class="left">
-                <h3>Crea una cuenta</h3>
+                <h3 style="text-align:center;">Bienvenido a HadtecSoft, cree una cuenta para ingresar.</h3>
                 <button type="button" class="register-btn"> Registrarme</button>
             </div>
             <div class="right">
