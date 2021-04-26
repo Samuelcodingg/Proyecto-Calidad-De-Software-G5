@@ -37,7 +37,7 @@
             <div class="logo">
                 <img type="button" src="image/Logo HadtecSoft (1).png" width="125px" onclick="window.location.href='index.php'">
             </div>
-            <div class="nav-items">
+            <div class="nav-items" style="margin-top:18px;">
                 <?php
                 session_start();
                 if (!empty($_SESSION['username'])) {
@@ -108,7 +108,7 @@
                     </ul>
                 </div>
             </div>
-            <form class="busc" action="results.php" method="get">
+            <form class="busc" action="results.php" method="get" style="margin-top:16px;">
                 <input type="search" class="search-data" name="busqueda" placeholder="Buscar" required>
                 <button type="submit" name="enviar" class="fas fa-search"></button>
             </form>

@@ -33,16 +33,16 @@ $dataUsuario = mysqli_fetch_array($queryusuario);
       <h1><?php echo $dataProduct['nombre'] ?></h1>
       <div class="price" data-id="<?php echo $dataProduct['id'] ?>"><?php echo 'S/' . $dataProduct['precio'] ?></div>
       <!--Cantidad de producto-->
-      <div class="qty d-flex pt-2">
+      <div class="qty d-flex pt-2" style="width:220px;">
         <div class="d-flex font-rale w-25">
           <button class="qty-up border bg-light" data-id="<?php echo $dataProduct['id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
-          <input type="text" data-id="<?php echo $dataProduct['id'] ?>" class="qty_input border px-2 w-100 bg-light" placeholder="1">
+          <input type="text" data-id="<?php echo $dataProduct['id'] ?>" class="qty_input border px-2 w-100 bg-light" style="width:50px;" placeholder="1">
           <button data-id="<?php echo $dataProduct['id'] ?? '0'; ?>" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
         </div>
       </div>
       <!--!Cantidad de producto-->
-      <input type="hidden" name="item_id" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
-      <input type="hidden" name="user_id" value="<?php echo 1 ?>">
+      <input type="hidden" name="item_id" style="width:50px;" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
+      <input type="hidden" name="user_id" style="width:50px;" value="<?php echo 1 ?>">
       <button class="btn" type="submit" name="product_submit">Añadir al carrito</button>
       <!--<?php
           if (isset($_POST['product_submit'])) {

@@ -40,7 +40,7 @@
             <div class="logo">
                 <a href="index.php"><img src="image/Logo HadtecSoft (1).png" width="125px" onclick="window.location.href='index.php'"></a>
             </div>
-            <div class="nav-items">
+            <div class="nav-items" style="margin-top:18px;">
             <?php
                     session_start();
                     if(!empty($_SESSION['username'])){
@@ -103,7 +103,7 @@
             <div class="cancel-icon">
                 <span class="fas fa-times"></span>
             </div>
-            <form action="results.php" method="get">
+            <form action="results.php" method="get" style="margin-top:17px;">
                 <input type="search" class="search-data" name="busqueda" placeholder="Buscar" required>
                 <button type="submit" name="enviar" class="fas fa-search"></button>
             </form>
