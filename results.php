@@ -27,23 +27,6 @@ include('header.php');
 
       </div>
 
-      <!-- <div>
-          <div class="block-title">
-            <h3>Marcas</h3>
-          </div>
-
-          <div class="category_list">
-            <a href="#" class="category_item centrar" category="all">Todo</a>
-            <a href="#" class="category_item centrar" category="hyperx">Hyperx</a>
-            <a href="#" class="category_item centrar" category="Toshiba"></a>
-            <a href="#" class="category_item centrar" category="discos">Discos</a>
-            <a href="#" class="category_item centrar" category="monitores">Monitores</a>
-            <a href="#" class="category_item centrar" category="placaMadre">Placa Madre</a>
-            <a href="#" class="category_item centrar" category="teclados">Teclados</a>
-            <a href="#" class="category_item centrar" category="case">Case</a>
-          </div>
-
-        </div> -->
     </div>
     <div class="col-3-of-4">
       <form action="" method="get">

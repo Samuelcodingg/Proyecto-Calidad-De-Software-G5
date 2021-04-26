@@ -80,16 +80,8 @@ include('header.php');
                     <a id="prod" href="<?php echo 'productDetails.php?id='.$data['id']?>"><h4 class="my-0 font-weight-bold"><?php echo $data['nombre'] ?></h4></a>
                     </div>
                     <div class="card-body">
-                        <!-- <img src="img/dell.jpg" class="card-img-top"> -->
                         <a id="prod" href="<?php echo 'productDetails.php?id='.$data['id']?>" target="_blank"><?php echo '<img src="' . $data['linkImagen1'] . '" class="card-img-top"/>' ?></a>
-                        <!-- <?php// echo '<img src="' . $data['linkImagen1'] . '" class="card-img-top"/>' ?> -->
                         <h1 class="card-title pricing-card-title precio">S/. <span class=""><?php echo $data['precio'] ?></span></h1>
-                        <!-- <ul class="list-unstyled mt-3 mb-4">
-                            <li></li>
-                            <li>8 GB RAM</li>
-                            <li>COLOR NEGRO</li>
-                            <li>1 TB DD</li>
-                        </ul> -->
                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="<?php echo $data['id']?>">Comprar</a>
                     </div>
                 </div>
@@ -106,16 +98,8 @@ include('header.php');
                     
                     </div>
                     <div class="card-body">
-                        <!-- <img src="img/dell.jpg" class="card-img-top"> -->
                         <?php echo '<a id="prod" href="productDetails.php?id='.$data['id'].'" target="_blank"><img src="' . $data['linkImagen1'] . '" class="card-img-top"/></a>' ?>
                         <h1 class="card-title pricing-card-title precio">S/. <span class=""><?php echo $data['precio'] ?></span></h1>
-                        <!-- <a href="index.php">s</a> -->
-                        <!-- <ul class="list-unstyled mt-3 mb-4">
-                            <li></li>
-                            <li>8 GB RAM</li>
-                            <li>COLOR NEGRO</li>
-                            <li>1 TB DD</li>
-                        </ul> -->
                         <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="<?php echo $data['id']?>">Comprar</a>
                     </div>
                 </div>

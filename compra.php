@@ -19,19 +19,6 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="container">
-            <div class="row justify-content-between mb-5">
-                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                    <a class="navbar-brand" href="index.html">BODEGUITA FLORES EIRL</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-            </div>
-        </div>
-    </header> -->
     <div class="header">
         <nav>
             <div class="menu-icon">
@@ -59,10 +46,6 @@
                         header("location:login.php");
                     }
                 ?>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
                     <div class="collapse navbar-collapse show" id="navbarCollapse" style="margin-left:300px;">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item dropdown show">
@@ -91,12 +74,6 @@
                     </div>
             </div>
             
-            <!-- <div class="shopping-icon">
-                <a href="cart(nuevo).php" class="py-2 rounded-pill color-primary-bg">
-                    <span class="font-size-16 px-2 text-black"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="px-3 py-2 rounded-pill text-light bg-dark"></span>
-                </a>
-            </div> -->
             <div class="search-icon">
                 <span class="fas fa-search"></span>
             </div>
@@ -140,9 +117,9 @@
                                         <th scope="col">Imagen</th>
                                         <th scope="col">Nombre</th>
                                         <th scope="col">Precio</th>
-                                        <th scope="col">Cantidad</th>
+                                        <th scope="col"></th>
                                         <th scope="col">Sub Total</th>
-                                        <!-- <th scope="col">Eliminar</th> -->
+
                                     </tr>
 
                                 </thead>
@@ -154,21 +131,21 @@
                                     <th scope="col">
                                         <p id="subtotal"></p>
                                     </th>
-                                    <!-- <th scope="col"></th> -->
+
                                 </tr>
                                 <tr>
                                     <th colspan="4" scope="col" class="text-right">IGV :</th>
                                     <th scope="col">
                                         <p id="igv"></p>
                                     </th>
-                                    <!-- <th scope="col"></th> -->
+
                                 </tr>
                                 <tr>
                                     <th colspan="4" scope="col" class="text-right">TOTAL :</th>
                                     <th scope="col">
                                         <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
                                     </th>
-                                    <!-- <th scope="col"></th> -->
+
                                 </tr>
 
                             </table>
@@ -209,7 +186,6 @@
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js?v=<?php echo time(); ?>"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js?v=<?php echo time(); ?>"></script>
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script> -->
 
     <script src="js/carrito.js?v=<?php echo time(); ?>"></script>
     <script src="js/compra.js?v=<?php echo time(); ?>"></script>

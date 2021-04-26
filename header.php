@@ -52,31 +52,6 @@
                     header("location:login.php");
                 }
                 ?>
-                <!-- <div class="collapse navbar-collapse show" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown show">
-                            <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="30px" width="30px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></img>
-                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
-                                <table id="lista-carrito" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Imagen</th>
-                                            <th>Nombre</th>
-                                            <th>Precio</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-
-                                <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block blanco" style="color:white;">Vaciar Carrito</a>
-                                <a href="#" id="procesar-pedido" class="btn btn-danger btn-block blanco" style="color:white;">Procesar
-                                    Compra</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
             <div class="search-icon">
                 <span class="fas fa-search"></span>
             </div>

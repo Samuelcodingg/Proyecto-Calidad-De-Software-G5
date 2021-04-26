@@ -43,7 +43,7 @@ $dataUsuario = mysqli_fetch_array($queryusuario);
       <!--!Cantidad de producto-->
       <input type="hidden" name="item_id" style="width:50px;" value="<?php echo $dataProduct['id'] ?? '1'; ?>">
       <input type="hidden" name="user_id" style="width:50px;" value="<?php echo 1 ?>">
-      <button class="btn" type="submit" name="product_submit">Añadir al carrito</button>
+      <a href="compra.php"><button class="btn" type="submit" name="product_submit">Comprar</button></a>
       <!--<?php
           if (isset($_POST['product_submit'])) {
             $userid = $_POST['user_id'];
@@ -100,11 +100,6 @@ if ($val !== FALSE) {
                 echo '<i class="fas fa-star"></i>';
               }
               ?>
-              <!-- <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i> -->
             </div>
           </div>
           <div class="client-comment">
@@ -134,9 +129,6 @@ if ($val !== FALSE) {
   <h3 class="">DEJA UN COMENTARIO</h3>
   <p class="">Nos importa tu opinión</p>
   <div class="w3-row w3-padding-32 w3-section">
-    <!-- <div class="w3-col m4 w3-container">
-                <img src="image/Ubicación-negocio.jpg" class="w3-image w3-round" style="width: 100%;">
-            </div> -->
     <div class="w3-col m8 w3-panel">
 
       <form action="" method="POST" target="_blank">

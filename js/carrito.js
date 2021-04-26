@@ -146,7 +146,7 @@ class Carrito {
                 <td>${producto.titulo}</td>
                 <td>S/${producto.precio}</td>
                 <td>
-                    <input type="number" style="width:50px" class="form-control cantidad" min="1" value=${producto.cantidad}>
+                    <!-- <input type="number" style="width:50px" class="form-control cantidad" min="1" value=${producto.cantidad}> -->
                 </td>
                 <td id='subtotales'>S/${producto.precio * producto.cantidad}</td>
                 <td>

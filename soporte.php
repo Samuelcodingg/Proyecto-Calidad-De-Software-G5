@@ -139,12 +139,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
 
-            <!-- <div class="shopping-icon">
-                <a href="cart(nuevo).php" class="py-2 rounded-pill color-primary-bg">
-                    <span class="font-size-16 px-2 text-black"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="px-3 py-2 rounded-pill text-light bg-dark"></span>
-                </a>
-            </div> -->
+            
             <div class="search-icon">
                 <span class="fas fa-search"></span>
             </div>

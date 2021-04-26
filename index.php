@@ -1,5 +1,4 @@
 <?php
-ob_start();
 // include header.php file
 include('header.php');
 ?>
@@ -14,7 +13,7 @@ include('header.php');
                 <div class="col-2">
                     <h1>Descubre la nueva manera de <br> adquirir hardware</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi corporis <br> culpa, minima aut totam voluptatibus qui vero mollitia sit maxime.</p>
-                    <a href="#" class="btn">Ver más &#8594;</a>
+                    <a href="productos.php" class="btn">Ver más &#8594;</a>
                 </div>
                 <div class="col-2">
                     <img src="image/budget-gaming-pc.png">
@@ -42,113 +41,78 @@ include('header.php');
 
     </div>
 
-    <!--Productos destacados-->
 
-    <div class="small-container">
-        <h2 class="title">Productos destacados</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="image/placa-de-video.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-            <div class="col-4">
-                <img src="image/placa-de-video.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-            <div class="col-4">
-                <img src="image/placa-de-video.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-            <div class="col-4">
-                <img src="image/placa-de-video.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-        </div>
-        <h2 class="title">Productos nuevos</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="image/Procesadores-Intel-Core-i7-6.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-            <div class="col-4">
-                <img src="image/Procesadores-Intel-Core-i7-6.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-            <div class="col-4">
-                <img src="image/Procesadores-Intel-Core-i7-6.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-            <div class="col-4">
-                <img src="image/Procesadores-Intel-Core-i7-6.jpg">
-                <h4>Lorem, ipsum dolor.</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>S/1519.99</p>
-            </div>
-        </div>
-    </div>
+    <?php  
+        include("con_db.php");
+        $query = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware WHERE id<=6;");
+        $result = mysqli_num_rows($query);
+        $i = 0;
 
+        if($result>0){
+            ?>
+            <div class="small-container">
+                <h2 class="title">Productos destacados</h2>
+                <div class="row">
+                    <?php
+                    while($info = mysqli_fetch_array($query)){
+                        $i++;
+                        ?>
+                        <div class="col-4">
+                            <img src="<?php echo $info['linkImagen1'];?>">
+                            <h4><?php echo $info['nombre'];?></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p><?php echo 'S/'.$info['precio']; ?></p>
+                        </div>
+                        <?php
+                    }
+                   ?>
+                </div>
+            </div>
+            <?php
+        }
+    ?>
+
+<?php  
+        include("con_db.php");
+        $queryNuevos = mysqli_query($conex, "SELECT id, linkImagen1, nombre, precio, tipo FROM productoshardware WHERE id>=10;");
+        $result = mysqli_num_rows($queryNuevos);
+        $i = 0;
+
+        if($result>0){
+            ?>
+            <div class="small-container">
+                <h2 class="title">Productos destacados</h2>
+                <div class="row">
+                    <?php
+                    while($infoNuevos = mysqli_fetch_array($queryNuevos)){
+                        $i++;
+                        ?>
+                            <div class="col-4">
+                                <img src="<?php echo $infoNuevos['linkImagen1'];?>">
+                                <h4><?php echo $infoNuevos['nombre'];?></h4>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p><?php echo 'S/'.$infoNuevos['precio']; ?></p>
+                            </div>
+                        <?php
+                    }
+                   ?>
+                </div>
+            </div>
+            <?php
+        }
+    ?>
     <!--Oferta-->
     <!--Nuestros clientes nos avalan-->
     <div class="testimonial">
